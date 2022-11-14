@@ -1,0 +1,38 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<aspnetTutorial.Data.User> _signInManager
+@{
+    var user = await _signInManager.UserManager.GetUserAsync(User);
+
+}
+
+<div class="header-buttons-responsive ">
+
+
+    <section>
+        @if (_signInManager.IsSignedIn(User))
+        {
+        <a asp-action="Account" asp-controller="Home"><i class="fas fa-user "></i> <span>Hola,@user.Name!</span></a>
+
+        }
+        else
+        {
+            <a asp-controller="Login" asp-action="SignIn"><i class="fas fa-user "></i> <span>Iniciar sesión</span> </a>
+        }
+    </section>
+    <section>
+        <a asp-controller="Home" asp-action="Menu"><i class="fas fa-utensils "></i><span> Menú</span></a>
+    </section>
+
+    <section>
+        @if (_signInManager.IsSignedIn(User))
+        { 
+            <a asp-controller="Book" asp-action="MakeReservation"> <i class="fas fa-calendar-alt "></i> <span>Reservar</span></a>
+        }
+        else
+        {
+          <a asp-action="SignIn" asp-controller="Login" asp-route-returnUrl="/Book/MakeReservation"> <i class="fas fa-calendar-alt "></i> <span>Reservar</span></a>  
+        }
+    </section>
+    <section>
+        <a asp-controller="Home" asp-action="AboutUs"><i class="fas fa-question-circle "></i> <span>Información</span></a>
+    </section>
+</div>

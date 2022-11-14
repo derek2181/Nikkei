@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel=" stylesheet " href="../aspnetTutorial/aspnetTutorial/wwwroot/Stylesheets/main.css">
+    <link rel=" stylesheet " href="../aspnetTutorial/aspnetTutorial/wwwroot/Stylesheets/menu.css ">
+    <link rel=" stylesheet " href="../Stylesheets/modal.css ">
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+    <title>Nikkei sushi</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="# ">Menú</a>
+                    </li>
+
+                    <li>
+                        <a href="# ">Reservar</a>
+                    </li>
+                    <li>
+                        <a href="# ">Información</a>
+                    </li>
+                    <li class="hidden-nav-button">
+                        <div class="button-header ">
+                            <a href="# ">Iniciar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="logo-header ">
+                <a href="index.html"> <img src="../Images/NikkeiBlackWidth.png " alt=" "></a>
+            </div>
+
+            <div class="button-header visible-button">
+                <a href="# ">Iniciar sesión</a>
+            </div>
+        </header>
+
+        <main>
+            <div id="menu" class="my-owl-carousel">
+                <div id="menu" class="owl-carousel owl-theme">
+
+                    <div class="item">
+                        <a class="image-menu">
+                            <img src="../Images/Dishes/BestSellingEdit.png" alt="">
+                        </a>
+
+                    </div>
+                    <div class="item">
+                        <a class="image-menu">
+                            <img src="../Images/Dishes/DrinksEdit.png" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="image-menu">
+                            <img src="../Images/Dishes/PaquetesEdit.png" alt=""></a>
+
+
+                    </div>
+                    <div class="item">
+                        <a class="image-menu"> <img src="../Images/Dishes/PromocionesEdit.png" alt=""></a>
+
+                    </div>
+                    <div class="item">
+                        <a class="image-menu"> <img src="../Images/Dishes/SushiRollsEdit.png" alt=""></a>
+
+                    </div>
+                    <div class="item">
+                        <a class="image-menu">
+                            <img src="../Images/Dishes/PescadoEdit.png" alt="">
+                        </a>
+
+                    </div>
+
+                    <div class="item">
+                        <a class="image-menu">
+                            <img src="../Images/Dishes/NigiriEdit.png" alt="">
+                        </a>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div class="menu-items-filter-container">
+                <div class="filter-bar">
+
+                    <h1>Filtrar por precio</h1>
+                    <div class="range">
+
+                        <div class="slider-value">
+                            <span>100</span>
+                        </div>
+                        <div class="field">
+                            <div class="value left">
+                                0
+                            </div>
+                            <input type="range" min="0" max="200" steps="1" value="100" id="precio_slide">
+                            <div class="value right">
+                                200
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="cards-container">
+
+                    <h1>Más vendido</h1>
+                    <div class="cards">
+
+                        <div class="not-found-message">
+                            <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Background/food_onigirazu.png" alt="">
+                            <h1>Lo sentimos, intenta buscar con otro precio</h1>
+                        </div>
+
+                    </div>
+                </div>
+
+
+        </main>
+
+        <footer>
+            <div class="back-to-top">
+                <i class="fas fa-arrow-alt-circle-up"></i>
+            </div>
+
+            <!-- <hr style="width:100%"> -->
+            <div class="footer-bottom">
+                <section class="left-footer-bottom">
+                    <!-- <h1>Nikkei</h1> -->
+
+                    <div class="contact-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="">+81 52462 5241</a>
+
+                    </div>
+                    <div class="contact-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href=""> Sces Trecho 02 Conjunto 32, Brasília</a>
+
+                    </div>
+                    <div class="contact-box">
+                        <i class="fas fa-envelope"></i>
+                        <a href="">NikkeiSushi@gmail.com</a>
+
+                    </div>
+                </section>
+                <section class="right-footer-bottom">
+                    <h1>Sobre nosotros</h1>
+                    <p>Contamos con el mejor servicio de reserva y la mejor atención que podrás recibir jamás. Visita Nikkei, contamos con 50 años de experiencia, el mejor restaurante de sushi en todo Brasilia
+                    </p>
+
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"> <i class="fab fa-whatsapp"></i></a>
+                        <a href="#"> <i class="fab fa-instagram"></i></a>
+                    </div>
+
+                </section>
+            </div>
+            <h1>2021 Nikkei. Todos los derechos reservados</h1>
+        </footer>
+
+        </div>
+        <div class="header-buttons-responsive">
+
+
+            <section>
+                <a href="#"><i class="fas fa-user"></i> <span>Iniciar sesión</span> </a>
+            </section>
+            <section>
+                <a href="#"><i class="fas fa-utensils"></i><span> Menú</span></a>
+            </section>
+
+            <section>
+                <a href="#"><i class="fas fa-calendar-alt"></i><span>Reservar</span> </a>
+            </section>
+            <section>
+                <a href="#"><i class="fas fa-question-circle"></i> Información</a>
+            </section>
+        </div>
+        <script src="../aspnetTutorial/aspnetTutorial/wwwroot/Scripts/main.js"></script>
+        <script src="../Scripts/review.js"></script>
+        <script src="../aspnetTutorial/aspnetTutorial/wwwroot/Scripts/menu.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+        <script>
+            const slideValue = document.querySelector("span")
+            const inputSlider = document.querySelector("input")
+            inputSlider.oninput = (() => {
+                let value = inputSlider.value;
+                slideValue.textContent = value;
+
+                slideValue.style.left = ((value) / 2) + "%";
+                slideValue.classList.add("show");
+                console.log(value - 1 / 2);
+
+            });
+
+            inputSlider.onblur = (() => {
+                slideValue.classList.remove("show");
+            });
+        </script>
+
+        </script>
+
+
+</body>
+
+</html>

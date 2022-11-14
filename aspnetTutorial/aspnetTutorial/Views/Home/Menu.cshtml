@@ -1,0 +1,101 @@
+﻿@model IEnumerable<DishModel>
+
+@section Style{
+  
+
+    @* <link href="~/introJSThemes/introjs-nassim.css" rel="stylesheet" />*@
+    <link href="~/OwlCarousel2/assets/owl.carousel.css" rel="stylesheet" />
+    <link href="~/OwlCarousel2/assets/owl.theme.default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Stylesheets/menu.css">
+    <link rel=" stylesheet " href="~/Stylesheets/modal.css">
+}
+@section modal{
+    <partial name="_modal" />
+}
+@{
+    string selection = "Rolls";
+    if (ViewBag.Selection != null)
+    {
+        selection = ViewBag.Selection;
+    }
+}
+
+<main>
+    <div class="my-owl-carousel">
+        <div id="menu" class="owl-carousel owl-theme">
+
+            <div data-ajax="true" class="item" id="Bebida">
+                <a data-ajax="true" id="Bebida" class="image-menu">
+                    <img id="Bebida" class="clickable-image" src="/Images/Dishes/DrinksEdit.png" alt="">
+                </a>
+            </div>
+            <div class="item" id="Paquete">
+                <a class="image-menu">
+                    <img id="Paquete" class="clickable-image" src="/Images/Dishes/PaquetesEdit.png" alt="">
+                </a>
+            </div>
+
+            <div class="item" id="Roll">
+                <a id="Roll" class="image-menu"> <img id="Roll" class="clickable-image" src="/Images/Dishes/SushiRollsEdit.png" alt=""></a>
+            </div>
+            <div class="item" id="Pescado">
+                <a class="image-menu" id="Pescado">
+                    <img class="clickable-image" id="Pescado" src="/Images/Dishes/PescadoEdit.png" alt="">
+                </a>
+            </div>
+            <div class="item" id="Nigiri">
+                <a id="Nigiri" class="image-menu">
+                    <img class="clickable-image" id="Nigiri" src="/Images/Dishes/NigiriEdit.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-items-filter-container">
+        <div class="filter-bar">
+
+            <h1>Filtrar por precio</h1>
+            <div class="range">
+
+                <div class="slider-value">
+                    <span class="slider-number">100</span>
+                </div>
+                <div class="field">
+                    <div class="value left">
+                        0
+                    </div>
+                    <input type="range" min="0" max="200" steps="1" value="100" id="precio_slide">
+                    <div class="value right">
+                        200
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cards-container">
+            <h1 class="menu-option"> @selection</h1>
+            <div class="cards">
+                @foreach (var dish in Model)
+                {
+                <partial name="_dishcard" model="dish" />
+                }
+                <div class="not-found-message">
+                    <img src="/Images/Background/food_onigirazu.png" alt="">
+                    <h1>Lo sentimos, intenta buscar con otro precio</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @section scripts{
+        <script src="~/lib/jquery/jquery.js"></script>
+        <script src="~/OwlCarousel2/owl.carousel.js"></script>
+
+        <script src="~/LoadingOverlay/loadingoverlay.js"></script>
+        <script src="~/LoadingOverlay/progressBar.js"></script>
+        <script src="~/Scripts/main.js">
+        </script>
+        <script src="~/Scripts/review.js"></script>
+        <script src="~/Scripts/menu.js"></script>
+    }
+</main>

@@ -1,0 +1,12 @@
+1-Revisar las rutas de mi localhost y del servidor en launchsettings.json o en appsettings.json
+2-Abrir una terminal de nuget package manager
+3-Escribir comando para añadir migración Ejemplo :Add-Migration initdatabase
+4-Escribir comando update-database para actualizar la base de datos en sql server
+5- Importar el backup de sql
+
+6-En caso de querer meter platillos usar el query
+UPDATE Dishes 
+SET imageBinary= 
+   (SELECT BulkColumn FROM OPENROWSET (BULK 'C:\Users\derek\Documents\Danielita\lisa.jpg', SINGLE_BLOB) a) 
+WHERE (id = 3)
+en sql server para actualizar la imagen

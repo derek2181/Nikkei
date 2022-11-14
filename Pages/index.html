@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel=" stylesheet " href="../aspnetTutorial/aspnetTutorial/wwwroot/Stylesheets/main.css">
+    <link rel=" stylesheet " href="../aspnetTutorial/aspnetTutorial/wwwroot/Stylesheets/modal.css">
+    <script src="http://code.jquery.com/jquery-latest.js">
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+
+    <!--Owl carousel-->
+    <title>Nikkei sushi </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="modal-bg">
+            <div class="modal-box">
+                <h4 class="close-modal">X</h4>
+                <div class="top-modal">
+                    <div class="left-top-modal">
+                        <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Nigiri/Maguro.png" alt="">
+                    </div>
+                    <div class="right-top-modal">
+                        <div class="name-description">
+                            <h1>Sakana chido</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores corrupti ad, ducimus fugit dolor culpa.
+                            </p>
+                        </div>
+                        <div class="rating-item-number">
+                            <span>5.0</span>
+                        </div>
+                        <div class="stars-text">
+                            <ul>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                                <li><i class="fas fa-star"></i></li>
+                            </ul>
+                            <span>Basado en 26 reviews</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="button-write-review">
+                    <button>Escribe tu reseña</button>
+                </div>
+                <div class="bottom-modal">
+                    <div class="reviews-box">
+
+
+                        <div class="review">
+                            <div class="top-review">
+                                <section class="user-reaction">
+                                    <i class="far fa-frown"></i>
+                                </section>
+                                <section class="user-rating">
+                                    <div class="face-name-date">
+                                        <h2>Derek Cortes</h2>
+                                    </div>
+                                    <ul>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><span> 2.5</span></li>
+                                    </ul>
+                                </section>
+                                <section class="days">
+                                    <span>Hace 4 dias</span>
+                                </section>
+
+                            </div>
+                            <div class="bottom-review">
+                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                            </div>
+                        </div>
+
+                        <div class="first-review-message">
+                            <h1>¡Se el primero en dar una reseña!</h1>
+                        </div>
+
+                    </div>
+                    <form method="post" class="send-review-box">
+                        <div class="stars-container">
+                            <span>Calificación:</span>
+                            <input type="radio" name="rating" id="rate-1" value="1">
+                            <label name="rating" id="rate-1" class="fas fa-star"></label>
+                            <input name="rating" type="radio" id="rate-2" value="2">
+                            <label name="rating" for="rate-2" id="rate-2" class="fas fa-star"></label>
+                            <input type="radio" name="rating" id="rate-3" value="3">
+                            <label for="rate-3" id="rate-3" class="fas fa-star"></label>
+                            <input type="radio" name="rating" id="rate-4" value="4">
+                            <label for="rate-4" id="rate-4" class="fas fa-star"></label>
+                            <input name="rating" type="radio" id="rate-5" value="5">
+                            <label for="rate-5" name="rating" id="rate-5" class="fas fa-star"></label>
+                        </div>
+
+                        <textarea id="review_text" name="review" cols="10" rows="5" placeholder="Escribe tu reseña"></textarea>
+                        <div class="confirm-button-con">
+                            <button type="button" class="confirm-review">Confirmar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="close-modal device">
+                <h2>
+                    Close
+                </h2>
+            </div>
+        </div>
+        <header>
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="menu.html ">Menú</a>
+                    </li>
+
+                    <li>
+                        <a href="book.html ">Reservar</a>
+                    </li>
+                    <li>
+                        <a href="info.html ">Información</a>
+                    </li>
+                    <li class="hidden-nav-button ">
+                        <div class="button-header ">
+                            <a href="login.html ">Iniciar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="logo-header ">
+                <a href="index.html "> <img src="../Images/NikkeiBlackWidth.png " alt=" "></a>
+            </div>
+            <div class="button-header visible-button ">
+                <a href="# ">Iniciar sesión</a>
+            </div>
+
+        </header>
+
+        <main>
+
+            <div class="my-owl-carousel ">
+                <div id="landing " class="owl-carousel owl-theme ">
+
+                    <div class="item ">
+                        <div id="item_1 " class="landing-offer ">
+                            <section class="offer-content ">
+                                <h1>
+                                    Registrate en Nikkei y agenda tu reservación
+                                </h1>
+                                <span>EN ESTE MOMENTO</span>
+                                <a href="# ">Registrarse</a>
+                            </section>
+
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div id="item_2 " class="landing-offer ">
+                            <section class="offer-content ">
+                                <h1>
+                                    Mira las reseñas de nuestro último Roll
+                                </h1>
+                                <span>Wasabi akimari</span>
+                                <a href="# ">Ver detalles</a>
+                            </section>
+                            <section class="offer-image ">
+
+                                <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Rolls/CosmoRoll.png " asp-append-version="true " alt=" ">
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="item ">
+                        <div id="item_3 " class="landing-offer ">
+                            <section class="offer-content ">
+                                <h1>
+                                    Consulta nuestros horarios y nuestra ubicación
+                                </h1>
+                                <a href="# ">Conocenos</a>
+                            </section>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+            <div class="dashboard-container ">
+                <div class="cards-container first ">
+                    <h1>En demanda</h1>
+                    <div class="cards ">
+                        <div class="card ">
+                            <a class="active-modal ">
+                                <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Nigiri/Filadelfia.png " alt=" ">
+                                <div class="hidden-card-content ">
+                                    <h1>Sakaba picoso</h1>
+                                    <h2>$20.00</h2>
+                                    <h3>Haz click para ver las reseñas</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card ">
+                            <a class="active-modal ">
+                                <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Nigiri/Filadelfia.png " alt=" ">
+                                <div class="hidden-card-content ">
+                                    <h1>Sakaba picoso</h1>
+                                    <h2>$20.00</h2>
+                                    <h3>Haz click para ver las reseñas</h3>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="card ">
+                            <a class="active-modal ">
+                                <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Nigiri/Filadelfia.png " alt=" ">
+                                <div class="hidden-card-content ">
+                                    <h1>Sakaba picoso</h1>
+                                    <h2>$20.00</h2>
+                                    <h3>Haz click para ver las reseñas</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card ">
+                            <a href=" ">
+                                <!-- <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Nigiri/Filadelfia.png " alt=" "> -->
+                                <div class="hidden-card-content ">
+                                    <h1>Sakaba picoso</h1>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="dashboard-container ">
+                <div class="cards-container second ">
+                    <h1>Recomendado para ti</h1>
+                    <div class="cards ">
+
+                        <div class="card ">
+                            <section class="left-card ">
+                                <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Rolls/KoEbiRoll.png " alt=" ">
+                            </section>
+                            <section class="right-card ">
+                                <h1>
+                                    Sakana
+                                </h1>
+                                <p>
+                                    Salmón, aleta amarilla y aderezo
+                                </p>
+
+
+                                <button class="active-modal ">VER RESEÑAS</button>
+                            </section>
+                        </div>
+                        <div class="card ">
+                            <section class="left-card ">
+                                <img src="../aspnetTutorial/aspnetTutorial/wwwroot/Images/Nigiri/Filadelfia.png " alt=" ">
+                            </section>
+                            <section class="right-card ">
+                                <h1>
+                                    Sakana
+                                </h1>
+                                <p>
+                                    Salmón, aleta amarilla y aderezo
+                                </p>
+
+
+                                <button class="active-modal ">VER RESEÑAS</button>
+                            </section>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </main>
+
+
+        <footer>
+            <div class="back-to-top ">
+                <i class="fas fa-arrow-alt-circle-up "></i>
+            </div>
+
+            <!-- <hr style="width:100% "> -->
+            <div class="footer-bottom ">
+                <section class="left-footer-bottom ">
+                    <!-- <h1>Nikkei</h1> -->
+
+                    <div class="contact-box ">
+                        <i class="fas fa-phone-alt "></i>
+                        <a href=" ">+81 52462 5241</a>
+
+                    </div>
+                    <div class="contact-box ">
+                        <i class="fas fa-map-marker-alt "></i>
+                        <a href=" "> Sces Trecho 02 Conjunto 32, Brasília</a>
+
+                    </div>
+                    <div class="contact-box ">
+                        <i class="fas fa-envelope "></i>
+                        <a href=" ">NikkeiSushi@gmail.com</a>
+
+                    </div>
+                </section>
+                <section class="right-footer-bottom ">
+                    <h1>Sobre nosotros</h1>
+                    <p>Contamos con el mejor servicio de reserva y la mejor atención que podrás recibir jamás. Visita Nikkei, contamos con 50 años de experiencia, el mejor restaurante de sushi en todo Brasilia
+                    </p>
+
+                    <div class="social-media ">
+                        <a href="# "><i class="fab fa-facebook "></i></a>
+                        <a href="# "> <i class="fab fa-whatsapp "></i></a>
+                        <a href="# "> <i class="fab fa-instagram "></i></a>
+                    </div>
+
+                </section>
+            </div>
+            <h1>2021 Nikkei. Todos los derechos reservados</h1>
+        </footer>
+
+
+    </div>
+    <div class="header-buttons-responsive ">
+
+
+        <section>
+            <a href="# "><i class="fas fa-user "></i> <span>Iniciar sesión</span> </a>
+        </section>
+        <section>
+            <a href="# "><i class="fas fa-utensils "></i><span> Menú</span></a>
+        </section>
+
+        <section>
+            <a href="# "><i class="fas fa-calendar-alt "></i><span>Reservar</span> </a>
+        </section>
+        <section>
+            <a href="# "><i class="fas fa-question-circle "></i> Información</a>
+        </section>
+    </div>
+    <script src="../aspnetTutorial/aspnetTutorial/wwwroot/Scripts/main.js ">
+    </script>
+    <script src="../Scripts/review.js "></script>
+    <script src="../aspnetTutorial/aspnetTutorial/wwwroot/Scripts/review.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js " integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin=" anonymous "></script>
+    <!-- <script src="../aspnetTutorial/aspnetTutorial/wwwroot/OwlCarousel2/owl.carousel.js " integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin=" anonymous "></script> -->
+
+</body>
+
+</html>

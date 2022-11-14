@@ -1,0 +1,47 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<aspnetTutorial.Data.User> _signInManager
+@{
+    var nombre = await _signInManager.UserManager.GetUserAsync(User);
+
+}
+@section Style{
+    <link rel="stylesheet" href="/Stylesheets/profile.css">
+}
+@model ChangePasswordModel
+<main>
+
+    <div class="profile-container">
+
+        <form method="POST" asp-action="Account" asp-controller="Home">
+            <h1>Cuenta</h1>
+            <div class="input-form">
+                <!--Poner error-input si hay algun error -->
+                <i class="fas fa-user"></i>
+                <input asp-for="Name" value="@nombre.Name">
+            </div>
+            <span style="color:red;" asp-validation-for="Name"> </span>
+            <div class="input-form">
+                <!--Poner error-input si hay algun error -->
+                <i class="fas fa-user"></i>
+                <input asp-for="LastName" value="@nombre.LastName">
+            </div>
+            <span style="color:red;" asp-validation-for="LastName"> </span>
+
+            
+            <button type="submit">Actualizar</button>
+
+
+        </form>
+        <div class="profile-box">
+            <a asp-action="Logout" asp-controller="Login">
+                <section style="justify-content: center;" class="profile-button">
+                    <h1>Cerrar sesión</h1>
+                    <!-- <i class="fas fa-book"></i> -->
+                </section>
+            </a>
+        </div>
+    </div>
+
+    <div class="profile-image">
+        <img src="/Images/SushiLandingPage2.png" alt="">
+    </div>
+</main>

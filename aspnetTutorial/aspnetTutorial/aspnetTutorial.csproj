@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>da28802f-e7b7-431f-a560-c78574b5b719</UserSecretsId>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\EmailTemplate\Email.html" />
+    <None Include="wwwroot\EmailTemplate\EmailConfirm.html" />
+    <None Include="wwwroot\Images\Background\BookBackground.png" />
+    <None Include="wwwroot\Images\Background\datepicker.png" />
+    <None Include="wwwroot\Images\Background\datepicker2.png" />
+    <None Include="wwwroot\Images\Background\MenuBackground.png" />
+    <None Include="wwwroot\Images\Background\NigiriToon.png" />
+    <None Include="wwwroot\Images\Background\NikkeiBuilding.jpg" />
+    <None Include="wwwroot\Images\Background\NikkeiInside.jpg" />
+    <None Include="wwwroot\Images\Background\NikkeiInside2.jpg" />
+    <None Include="wwwroot\Images\Background\NikkeiOutside.jpg" />
+    <None Include="wwwroot\Images\Background\NikkeiOutside.png" />
+    <None Include="wwwroot\Images\Background\NikkeiOutside2.jpg" />
+    <None Include="wwwroot\Images\Background\NikkeiOutside3.jpg" />
+    <None Include="wwwroot\Images\Background\NikkeiOutside4.jpg" />
+    <None Include="wwwroot\Images\Background\PageBackground.png" />
+    <None Include="wwwroot\Images\Background\RestaurantToon.png" />
+    <None Include="wwwroot\Images\Background\ScheduleImage.png" />
+    <None Include="wwwroot\Images\Background\Untitled-1.png" />
+    <None Include="wwwroot\Images\Background\WaitressToon.png" />
+    <None Include="wwwroot\Images\Dishes\1.png" />
+    <None Include="wwwroot\Images\Dishes\BestSelling.jpg" />
+    <None Include="wwwroot\Images\Dishes\BestSellingEdit.png" />
+    <None Include="wwwroot\Images\Dishes\Dish1.jpg" />
+    <None Include="wwwroot\Images\Dishes\Dish2.jpg" />
+    <None Include="wwwroot\Images\Dishes\Dish3.jpg" />
+    <None Include="wwwroot\Images\Dishes\Dish4.jpg" />
+    <None Include="wwwroot\Images\Dishes\Dish5.jpg" />
+    <None Include="wwwroot\Images\Dishes\Drinks.jpg" />
+    <None Include="wwwroot\Images\Dishes\DrinksEdit.png" />
+    <None Include="wwwroot\Images\Dishes\Login1.jpg" />
+    <None Include="wwwroot\Images\Dishes\Login2.jpg" />
+    <None Include="wwwroot\Images\Dishes\Login3.jpg" />
+    <None Include="wwwroot\Images\Dishes\Nigiri.jpg" />
+    <None Include="wwwroot\Images\Dishes\NigiriEdit.png" />
+    <None Include="wwwroot\Images\Dishes\Paquetes.jpg" />
+    <None Include="wwwroot\Images\Dishes\PaquetesEdit.png" />
+    <None Include="wwwroot\Images\Dishes\Pescado.jpg" />
+    <None Include="wwwroot\Images\Dishes\PescadoEdit.png" />
+    <None Include="wwwroot\Images\Dishes\Promociones.jpg" />
+    <None Include="wwwroot\Images\Dishes\PromocionesEdit.png" />
+    <None Include="wwwroot\Images\Dishes\SushiRolls.jpg" />
+    <None Include="wwwroot\Images\Dishes\SushiRollsEdit.png" />
+    <None Include="wwwroot\Images\Icons\leftIconpng.png" />
+    <None Include="wwwroot\Images\Icons\righticon.png" />
+    <None Include="wwwroot\Images\Icons\rightIconpng.png" />
+    <None Include="wwwroot\Images\Icons\ui-icons_ffffff_256x240.png" />
+    <None Include="wwwroot\Images\NikkeiBlackWidth.png" />
+    <None Include="wwwroot\Images\NikkeiWhiteWidth.png" />
+    <None Include="wwwroot\Images\SushiLandingPage.png" />
+    <None Include="wwwroot\Images\SushiLandingPage2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="1" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="NETCore.MailKit" Version="2.0.3" />
+  </ItemGroup>
+
+</Project>

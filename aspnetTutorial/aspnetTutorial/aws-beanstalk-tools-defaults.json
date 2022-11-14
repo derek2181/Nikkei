@@ -1,0 +1,20 @@
+
+{
+    "region" : "us-east-2",
+    "configuration" : "Debug",
+    "framework"     : "netcoreapp3.1",
+    "self-contained" : false,
+    "application"    : "NikkeiRestaurant",
+    "environment"    : "NikkeiRestaurant-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-408b2937\";\"aws:ec2:vpc,Subnets\"=\"subnet-6171861c\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.1.5 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "nikkeirestaurant-dev",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "nikkei_key",
+    "instance-profile"     : "aws-elasticbeanstalk-NikkeiRestaurant-dev",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}

@@ -1,0 +1,21 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<aspnetTutorial.Data.User> _signInManager
+@{
+    var nombre = await _signInManager.UserManager.GetUserAsync(User);
+
+}
+@if (_signInManager.IsSignedIn(User))
+{
+    <li class="hidden-nav-button">
+        <div class="button-header ">
+            <a asp-action="Account" asp-controller="Home">Hola,@nombre.Name!</a>
+        </div>
+    </li>
+}
+else
+{
+    <li class="hidden-nav-button">
+        <div class="button-header ">
+            <a asp-action="SignIn" asp-controller="Login">Iniciar Sesión</a>
+        </div>
+    </li>
+}

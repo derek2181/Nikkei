@@ -1,0 +1,23 @@
+{
+  "name": "jquery-datepicker",
+  "version": "1.12.1",
+  "description": "Just the datepicker lib from jquery-ui 1.12.1",
+  "main": "jquery-datepicker.js",
+  "scripts": {
+    "start": "parcel --no-cache index.html"
+  },
+  "author": "cmswalker",
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "jquery-ui",
+    "jquery-datepicker",
+    "i18n"
+  ],
+  "devDependencies": {
+    "parcel-bundler": "^1.6.2"
+  },
+  "dependencies": {
+
+  }
+}

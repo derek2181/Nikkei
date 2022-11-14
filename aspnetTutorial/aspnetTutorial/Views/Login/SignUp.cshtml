@@ -1,0 +1,90 @@
+﻿
+@section Style{
+    <link rel="stylesheet" href="/Stylesheets/login.css">
+}
+
+@{
+
+string error=ViewBag.Error;
+}
+
+@section scripts{
+    <script src="/Scripts/main.js">
+    </script>
+}
+@model UserModel
+<main>
+
+    <div class="login-container">
+
+        <form method="post" asp-action="SignUp" asp-controller="Login">
+            <h1>Registrate</h1>
+            <div id="NameForm" class="input-form">
+                <!--Poner error-input si hay algun error -->
+                <i class="fas fa-user"></i>
+                <input asp-for="Name" placeholder="Nombre">
+            </div>
+            <span id="Name" asp-validation-for="Name"></span>
+            <div class="input-form">
+                <!--Poner error-input si hay algun error -->
+                <i class="fas fa-user"></i>
+                <input asp-for="LastName" placeholder="Apellido">
+            </div>
+            <span id="LastName" asp-validation-for="LastName"> </span>
+            <div class="input-form">
+                <!--Poner error-input si hay algun error -->
+                <i class="fas fa-user"></i>
+                <input asp-for="Email" placeholder="Correo electronico">
+            </div>
+            <span id="Email" asp-validation-for="Email">@(error != null ? error : "")</span>
+            <!--<i class="fas fa-exclamation-circle"></i>-->
+            <div class="input-form">
+                <i class="fas fa-key"></i>
+                <input type="password" asp-for="Password" placeholder="Contraseña">
+
+            </div>
+            <span id="Password" asp-validation-for="Password"> </span>
+
+            <div class="input-form">
+                <i class="fas fa-key"></i>
+                <input type="password" asp-for="ConfirmPassword" placeholder="Confirmar contraseña">
+            </div>
+            <span id="ConfirmPassword" asp-validation-for="ConfirmPassword"></span>
+            <button type="submit">Registrarse</button>
+
+
+
+        </form>
+        <form class="fb-form" asp-controller="Login" asp-action="ExternalLogin">
+            <input type="hidden" name="returnURL" value="@ViewBag.returnURL" />
+            <button class="fb-icon" name="provider" value="Facebook">
+
+                <div class="logo-fb-button">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="logo-phrase">
+                    <h1>Entrar con Facebook</h1>
+                </div>
+
+            </button>
+        </form>
+        <form class="g-form" asp-controller="Login" asp-action="ExternalLogin">
+            <button type="submit" name="provider" value="Google" class="g-icon">
+                <input type="hidden" name="returnURL" value="@ViewBag.returnURL" />
+                <div class="logo-g-button">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="logo-phrase">
+                    <h1>Entrar con Google</h1>
+                </div>
+
+            </button>
+        </form>
+        <h1>¿Ya tienes una cuenta? <a href="">Inicia sesión</a></h1>
+
+
+
+
+
+    </div>
+</main>

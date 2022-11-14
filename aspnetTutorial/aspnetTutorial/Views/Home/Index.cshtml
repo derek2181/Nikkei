@@ -1,0 +1,109 @@
+﻿
+@inject Microsoft.AspNetCore.Identity.SignInManager<aspnetTutorial.Data.User> _signInManager
+
+
+@{
+    dynamic data = ViewBag.Data;
+    var nombre = await _signInManager.UserManager.GetUserAsync(User);
+}
+@{
+
+
+}
+
+<main>
+
+
+
+    <div class="my-owl-carousel">
+        <div id="landing" class="owl-carousel owl-theme ">
+
+
+            @if (_signInManager.IsSignedIn(User))
+            {
+                <div class="item">
+                    <div id="item_1" class="landing-offer">
+                        <section class="offer-content">
+                            <h1>
+                                Realiza tu reservación
+                            </h1>
+                            <span>EN ESTE MOMENTO</span>
+                            <a asp-action="MakeReservation" asp-controller="Book">Reservar</a>
+                        </section>
+
+                    </div>
+                </div>
+
+            }
+            else
+            {
+                <div class="item">
+                    <div id="item_1" class="landing-offer">
+                        <section class="offer-content">
+                            <h1>
+                                Registrate en Nikkei y agenda tu reservación
+                            </h1>
+                            <span>EN ESTE MOMENTO</span>
+                            <a asp-action="SignUp" asp-controller="Login">Registrarme</a>
+                        </section>
+
+                    </div>
+                </div>
+            }
+
+            @await Component.InvokeAsync("TopRollOwl")
+
+
+            <div class="item">
+                <div id="item_3" class="landing-offer">
+                    <section class="offer-content">
+                        <h1>
+                            Consulta nuestros horarios y nuestra ubicación
+                        </h1>
+                        <a asp-controller="Home" asp-action="AboutUs">Conocenos</a>
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        @await Component.InvokeAsync("TopDishes", new { count = 4 })
+
+    </div>
+
+    <div class="dashboard-container">
+        @await Component.InvokeAsync("TopRolls", new { count = 4 })
+    </div>
+
+
+</main>
+
+@section Style{
+    <link rel=" stylesheet " href="~/Stylesheets/modal.css">
+    <link href="~/OwlCarousel2/assets/owl.carousel.css" rel="stylesheet" />
+    <link href="~/OwlCarousel2/assets/owl.theme.default.css" rel="stylesheet" />
+}
+
+@section scripts{
+    <script src="~/lib/jquery/jquery.js"></script>
+    <script src="~/OwlCarousel2/owl.carousel.js"></script>
+    <script src="~/Scripts/main.js">
+    </script>
+    <script src="~/Scripts/review.js"></script>
+
+    <script>
+        $('.fas.fa-arrow-alt-circle-up').click(() => {
+            $("html, body").animate({
+                scrollTop: "0"
+            }, 1000);
+        })
+    </script>
+}
+
+@section modal{
+
+    <partial name="_modal" />
+}

@@ -1,0 +1,32 @@
+﻿@inject Microsoft.AspNetCore.Identity.SignInManager<aspnetTutorial.Data.User> _signInManager
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a asp-controller="Home" asp-action="Menu">Menú</a>
+            </li>
+            @if (_signInManager.IsSignedIn(User))
+            {
+
+                <li>
+                    <a asp-controller="Book" asp-action="MakeReservation" >Reservar</a>
+                </li>
+            }
+            else
+            {
+                <li>
+                    <a  asp-action="SignIn" asp-controller="Login" asp-route-returnUrl="/Book/MakeReservation">Reservar</a>
+                </li>
+            }
+            <li>
+                <a asp-action="AboutUs" asp-controller="Home" >Información</a>
+            </li>
+            <partial name="_loginInfo" />
+        </ul>
+    </nav>
+    <div class="logo-header ">
+        <a asp-controller="Home" asp-action="Index"> <img src="/Images/NikkeiBlackWidth.png " alt=" "></a>
+    </div>
+
+    <partial name="_headerLoginInfo" />
+</header>

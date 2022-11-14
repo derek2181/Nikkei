@@ -1,0 +1,291 @@
+:root {
+    --red-landing: #8f1b04;
+    --header-buttons: #621101;
+    --white-main: #FFFFFF;
+    --gray-background: #ececec;
+    --gray-button: #cccccc;
+    --gray-footer: #403638;
+    --hover-red-button: rgb(80, 14, 14);
+    --hover-white-button: rgb(240, 240, 240);
+}
+
+.container {
+    background: #403638;
+}
+
+.container main {
+    display: flex;
+    height: 100%;
+    background: linear-gradient(130deg, var(--gray-background) 49.5%, var(--red-landing) 50%);
+}
+
+.profile-container {
+    display: flex;
+    width: 50%;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-image {
+    width: 50%;
+    display: flex;
+    align-items: right;
+}
+
+.profile-image img {
+    width: 100%;
+}
+
+.profile-container form h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    padding-top: 1.5em;
+}
+
+.profile-container form {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.profile-container form span {
+    font-size: 2rem;
+    width: 90%;
+}
+
+.profile-container .input-form {
+    width: 100%;
+    background: var(--white-main);
+    padding: 0.8em;
+    border-radius: 2em;
+    margin-bottom: 1.6em;
+    border: 0.2em solid black;
+}
+
+.profile-container form .input-form.error-input {
+    border: 0.2em solid var(--red-landing)
+}
+
+.profile-container form span i {
+    color: var(--red-landing);
+    margin-bottom: 1.3em;
+}
+
+.profile-container form .input-form i {
+    font-size: 2.3rem;
+    width: 8%;
+    text-align: center;
+}
+
+.profile-container form .input-form input {
+    font-size: 2.6rem;
+    width: 88%;
+    outline: none;
+    border: none;
+}
+
+.profile-container form button {
+    width: 50%;
+    padding: 0.5em;
+    font-size: 2.3rem;
+    font-weight: 600;
+    border-radius: 0.8em;
+    background: var(--header-buttons);
+    color: var(--white-main);
+    outline: none;
+}
+
+.profile-container form button:hover {
+    background: var(--hover-red-button);
+    cursor: pointer;
+}
+
+.profile-container form input:focus {
+    /* border: 0.3em solid var(--header-buttons); */
+}
+
+.profile-container form input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--white-main) inset;
+}
+
+.profile-container .profile-box {
+    width: 100%;
+    display: flex;
+    margin: 2em 0;
+    justify-content: center;
+}
+
+.profile-container .profile-box a {
+    border: 0.1em solid black;
+    background: var(--header-buttons);
+    width: 35%;
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+.profile-container .profile-box a:hover {
+    cursor: pointer;
+    background: var(--hover-red-button);
+}
+
+.profile-container .profile-box a section.profile-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-container .profile-box a section.profile-button h1 {
+    font-size: 2rem;
+    color: var(--white-main);
+    margin: 0;
+    padding: 1em;
+}
+
+.profile-container .profile-box a section.profile-button i {
+    font-size: 2rem;
+    color: var(--white-main);
+    margin: 0;
+    padding: 1em;
+}
+
+@media screen and (max-width:1600px) {
+    .profile-container form {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    .profile-container .profile-box a section.profile-button {
+        flex-direction: row;
+        width: 100%;
+    }
+    .profile-container .profile-box a section.profile-button h1 {}
+    .profile-container .profile-box a section.profile-button i {
+        font-size: 2rem;
+    }
+    .profile-container form {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .container main {
+        flex-direction: column;
+        background: linear-gradient(180deg, var(--gray-background) 50.5%, var(--red-landing) 50%);
+    }
+    .container main .profile-container {
+        order: 0;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .container main .profile-image {
+        width: 100%;
+    }
+    .profile-container .profile-box a section.profile-button {
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    .profile-container .profile-box a section.profile-button h1 {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+    .profile-container .profile-box a section.profile-button i {
+        font-size: 1.3rem;
+    }
+    .profile-container form {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .profile-container form {
+        width: 60%;
+    }
+    .profile-container form span {
+        font-size: 1.45rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    /* div.header-buttons-responsive {
+visibility: visible;
+display: flex;
+width: 100%;
+} */
+    .profile-container form {
+        width: 80%;
+    }
+    .container main {
+        flex-direction: column;
+        background: linear-gradient(180deg, var(--gray-background) 70.5%, var(--red-landing) 70%);
+    }
+    .container main .profile-container {
+        order: 0;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .container main .profile-image {
+        width: 100%;
+    }
+    .profile-container .profile-box a section.profile-button {
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    .profile-container .profile-box a section.profile-button h1 {
+        font-size: 1.6rem;
+        margin: 0;
+    }
+    .profile-container .profile-box a section.profile-button i {
+        font-size: 1.3rem;
+    }
+    .profile-container form span {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container main {
+        background: linear-gradient(180deg, var(--gray-background) 65.5%, var(--red-landing) 67.5%);
+    }
+    .profile-container .profile-box a {
+        width: 60%;
+    }
+    .profile-container .profile-box a section.profile-button {
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    .profile-container .profile-box a section.profile-button h1 {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    .profile-container .profile-box a section.profile-button h1 i {
+        padding: 0;
+        width: 100%;
+    }
+    .profile-container form button {
+        font-size: 1.6rem;
+        width: 90%;
+    }
+    .profile-container form {
+        width: 80%;
+    }
+    .profile-container form span {
+        font-size: 1.3rem;
+    }
+    .profile-container form .input-form i {
+        font-size: 2.3rem;
+        width: 10%;
+        text-align: center;
+    }
+    .profile-container form .input-form input {
+        width: 84%;
+    }
+}

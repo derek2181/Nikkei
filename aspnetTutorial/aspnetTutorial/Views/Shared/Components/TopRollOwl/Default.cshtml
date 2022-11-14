@@ -1,0 +1,72 @@
+﻿@model DishModel
+
+@inject Microsoft.AspNetCore.Identity.SignInManager<aspnetTutorial.Data.User> _signInManager
+
+@if (_signInManager.IsSignedIn(User))
+{
+
+    <div class="item">
+        <div id="item_2" class="landing-offer">
+            <section class="offer-content">
+                <h1>
+                    Mira las reseñas de nuestro mejor Roll
+                </h1>
+                @if (Model == null)
+                {
+
+                    <span>No hay roles reseñados</span>
+                }
+                else
+                {
+                    <span>@Model.Name</span>
+                    <a id="@Model.ID" class="active-modal">Ver detalles</a>
+                }
+            </section>
+            @if (Model != null)
+            {
+                <section class="offer-image">
+                    <img id="@Model.ID" src="@String.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(Model.imageBinary))" )" asp-append-version="true" alt="">
+                </section>
+            }
+          
+        </div>
+    </div>
+
+}
+else
+{
+
+    <div class="item">
+        <div id="item_2" class="landing-offer">
+            <section class="offer-content">
+                <h1>
+                    Mira las reseñas de nuestro mejor Roll
+                </h1>
+<<<<<<< HEAD
+                <span>@Model.Name</span>>
+                <a  asp-controller="Login" asp-action="SignIn">Ver detalles</a>
+            </section>
+            <section class="offer-image">
+
+                <img id="@Model.ID" src="@String.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(Model.imageBinary))" )" asp-append-version="true" alt="">
+=======
+                @if(Model == null)
+                {
+                    <span>No hay roles reseñados</span>
+                } else
+                {
+                    <span>@Model.Name</span>
+                }
+                    <a  asp-controller="Login" asp-action="SignIn">Ver detalles</a>
+>>>>>>> a79010731310773220e8a4d97a45d458e3bacbe5
+            </section>
+            @if(Model != null)
+            {
+                <section class="offer-image">
+                    <img id="@Model.ID" src="@String.Format("data:image/jpg;base64,{0}", Convert.ToBase64String(Model.imageBinary))" )" asp-append-version="true" alt="">
+                </section>
+            }
+        </div>
+    </div>
+
+}

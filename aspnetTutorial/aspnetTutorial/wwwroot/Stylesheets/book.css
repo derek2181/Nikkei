@@ -1,0 +1,840 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --red-landing: #8f1b04;
+    --header-buttons: #621101;
+    --white-main: #FFFFFF;
+    --gray-background: #ececec;
+    --gray-button: #cccccc;
+    --gray-footer: #403638;
+    --hover-red-button: rgb(80, 14, 14);
+    --hover-white-button: rgb(240, 240, 240);
+}
+
+.introjs-tooltip.introjs-bottom-left-aligned {
+    background: white !important;
+    color: black;
+    font-size: 3rem;
+}
+
+.introjs-progressbar {
+    background: var(--gray-button);
+}
+
+.introjs-button.introjs-nextbutton.introjs-donebutton {
+    background: var(--header-buttons);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 300;
+}
+
+.introjs-button.introjs-nextbutton {
+    background: var(--header-buttons);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 300;
+}
+
+.introjs-button.introjs-prevbutton {
+    background: var(--header-buttons);
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 300;
+}
+
+introjs-button.introjs-prevbutton.introjs-disabled {
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: 300;
+}
+
+.introjs-tooltiptext {
+    font-size: 2rem;
+}
+
+.introjs-skipbutton {
+    color: black;
+    font-size: 4rem;
+}
+
+
+table.ui-datepicker-calendar thead tr th span {
+    font-size: 2.5rem;
+}
+
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+    background: var(--header-buttons);
+    color: white;
+    font-size: 4rem;
+    width: 100%;
+}
+
+
+/*Resalta el dia actual*/
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    background: var(--header-buttons);
+    color: white;
+    border: 1px solid white;
+}
+
+
+/*El hover de los botones se lo quito*/
+
+.ui-datepicker-next.ui-corner-all.ui-state-hover.ui-datepicker-next-hover,
+.ui-datepicker-prev.ui-corner-all.ui-state-hover.ui-datepicker-prev-hover {
+    background: none;
+    border: none;
+}
+
+
+/*Le cambio la imagen que tiene default en el jquery*/
+
+.ui-widget-header .ui-datepicker-prev .ui-icon {
+    background-image: url("../Images/Icons/leftIconpng.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 65px;
+    height: 500px;
+    /* height: 100px; */
+    /* z-index: 100; */
+    /* border: 0.2em solid black; */
+    cursor: pointer;
+}
+
+.ui-widget-header .ui-datepicker-next .ui-icon {
+    /* background-image: url("../Images/Icons/ui-icons_ffffff_256x240.png"); */
+    background-image: url("../Images/Icons/rightIconpng.png");
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    cursor: pointer;
+    /* background-position: 0px 0px !important; */
+}
+
+
+/* .ui-icon.ui-icon-circle-triangle-w {
+    background-position: 0px 0px;
+} */
+
+.ui-datepicker .ui-datepicker-prev span {
+    left: 0rem;
+    top: -0.65rem;
+    /* margin: 0px; */
+}
+
+.ui-datepicker .ui-datepicker-next span {
+    left: 0;
+    top: 1rem;
+    margin: 0px;
+    /* font-size: 1rem; */
+}
+
+.ui-datepicker .ui-datepicker-next .ui-icon {
+    background-position: 0px 0px;
+}
+
+
+/*Le cambio el color al dia seleccionado*/
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background: black;
+    border: 1px solid black;
+    font-weight: 650;
+}
+
+div#ui-datepicker-div.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all.style {
+    display: flex;
+}
+
+.ui-widget-content {
+    width: 80%;
+    /* position: sticky; */
+}
+
+.ui-datepicker {
+    font-size: 9pt !important
+}
+
+
+/*Ajusto el tamaño de las celdas del calendario*/
+
+.ui-datepicker td a {
+    /* height: 10em; */
+    /* font-size: 2rem; */
+    font-size: 6.5em;
+}
+
+.ui-datepicker-unselectable.ui-state-disabled {
+    font-size: 6em;
+}
+
+main .container {}
+
+
+/*Este clase es la parte de arriba del calendar*/
+
+header {
+    /* height: 20vh; */
+}
+
+.error-book {
+    width: 80%;
+    font-size: 1.4rem;
+    color: #c91224;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fab1b7;
+    margin: 0 auto;
+    position: relative;
+    height: 100px;
+}
+
+.error-book h1 {
+    font-weight: 800;
+}
+
+.error-book h2 {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.success-book {
+    width: 80%;
+    font-size: 1.4rem;
+    color: #f2f3f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #F8D7DA; */
+    background: #03b32f;
+    margin: 0 auto;
+    position: relative;
+    height: 100px;
+}
+
+.success-book h1 {
+    font-weight: 800;
+}
+
+.success-book h2 {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.container main {
+    width: 100%;
+    margin: 0 auto;
+    /* height: 60vh; */
+    position: relative;
+    background: url("../Images/Background/BookBackground.png");
+    background-size: 300px;
+    background-position: 65% 100%;
+    background-color: #ececec;
+    background-repeat: no-repeat;
+    padding-bottom: 5em;
+    ;
+}
+
+footer {}
+
+main .book-header {
+    width: 100%;
+    /* background-image: url('../Images/Dishes/Dish2.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: var(--gray-footer);
+    margin: 0 auto;
+}
+
+main .book-header h1 {
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    padding: 2em;
+    /* width: fit-content; */
+}
+
+main .book-content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding-bottom: 1em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+main .book-content form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 8em;
+}
+
+main .book-content form section {
+    margin-right: 1em;
+}
+
+.book-content .input-form {
+    background: var(--header-buttons);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 1em;
+    /* border: 0.4em solid var(--header-buttons); */
+    cursor: pointer;
+    /* padding: 1em; */
+    /* margin: 1em; */
+    transition: background 200ms ease-in;
+}
+
+.book-content .input-form:hover {
+    background: black;
+}
+
+.book-content .input-form label {
+    width: 20%;
+    font-size: 4rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.2em
+}
+
+.book-content .input-form input {
+    outline: none;
+    border: none;
+    background: none;
+    width: 80%;
+    color: white;
+    /* opacity: 0; */
+    font-weight: 600;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.book-content .input-section-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* width: 15%; */
+}
+
+.book-content .input-section-book h1 {
+    text-align: center;
+    font-size: 3rem;
+    width: 80%;
+}
+
+.book-content .input-section-hour {
+    /* width: 30%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    /* background: black; */
+    /* margin-top: 3em; */
+}
+
+.book-content .input-section-hour h1 {
+    font-size: 3rem;
+}
+
+.book-content .input-section-hour .hours-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-content .input-section-hour .hours-container input {
+    display: none;
+}
+
+.book-content .input-section-hour .hours-container input:checked+label {
+    background: black;
+    color: white;
+}
+
+
+/* .book-content .input-section-hour .hours-container input:not(:checked)+label {
+    background: var(--header-buttons);
+} */
+
+.book-content .input-section-hour .hours-container label {
+    font-size: 3rem;
+    background: linear-gradient(to right, var(--header-buttons) 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: 0% 100%;
+    color: var(--white-main);
+    /* padding: 0.2em; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 45%; */
+    /* text-align: center; */
+    padding: 0.2em;
+    border-radius: 0.1em;
+    margin-bottom: 0.4em;
+    cursor: pointer;
+    transition: background-position 400ms ease-in-out;
+}
+
+.book-content .input-section-hour .hours-container label:hover {
+    background-position: -100% 100%;
+}
+
+.book-content .input-section-hour .hours-container label i {
+    padding-left: 0.2em;
+}
+
+.book-content .input-section-persons {
+    display: flex;
+    /* justify-content: center; */
+    /* width: 20%; */
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.book-content .input-section-persons h1 {
+    font-size: 3rem;
+}
+
+.book-content .input-section-persons .number-persons-container {
+    width: 80%;
+    margin: 0;
+}
+
+.book-content .input-section-persons .number-persons-container i {
+    width: 14%;
+    font-size: 3rem;
+}
+
+.book-content .input-section-persons .number-persons-container input {
+    width: 16%;
+    /* background: none; */
+    font-size: 3rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    padding: 0;
+}
+
+.book-content .input-section-persons .number-persons-container button {
+    font-size: 3rem;
+    width: 30%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: var(--header-buttons);
+    color: var(--white-main);
+    outline: none;
+    cursor: pointer;
+    transition: background 200ms ease;
+    font-weight: 750;
+}
+
+.book-content .input-section-persons .number-persons-container button:hover {
+    background: var(--hover-red-button);
+}
+
+.book-content .input-section-persons .number-persons-container input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.book-content .button-book {
+    /* width: 20%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.book-content .button-book section {
+    padding-bottom: 2em;
+}
+
+.book-content .button-book section label {
+    font-size: 1.5rem;
+    width: 100%;
+    /* text-align: center; */
+}
+
+.fa-arrow-alt-circle-up {
+    display: none;
+}
+
+.book-content .button-book span {
+    color: rgb(255, 1, 1);
+    font-size: 1.5rem;
+}
+
+.book-content .button-book section label a {
+    font-weight: 600;
+}
+
+.book-content .button-book button {
+    font-size: 3rem;
+    padding: 0.4em;
+    background: var(--header-buttons);
+    color: var(--white-main);
+    cursor: pointer;
+}
+
+.book-content .button-book button:hover {
+    background: var(--hover-red-button);
+}
+
+.modal-bg {
+    width: 100%;
+    min-height: 110vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    transition: visibility 0s ease, opacity 500ms ease;
+}
+
+.image-book {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    /* position: absolute;
+    bottom: 0; */
+    margin: 0 auto;
+    justify-content: center;
+    /* background: black; */
+    height: 300px;
+    padding-top: 3em;
+}
+
+.image-book img {
+    width: 20%;
+}
+
+@media screen and (max-width:1600px) {
+    .success-book h1 {
+        font-size: 2.7rem;
+    }
+    .container main {
+        width: 100%;
+        margin: 0 auto;
+        /* height: 60vh; */
+        position: relative;
+        background: none;
+        background-size: 300px;
+        background-position: 65% 50%;
+        background-color: #ececec;
+        background-repeat: no-repeat;
+    }
+    main .book-content form {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .book-content .input-section-book {
+        align-items: center;
+        /* width: 80%; */
+    }
+    .book-content .input-section-book h1,
+    .book-content .input-section-hour h1,
+    .book-content .input-section-persons h1,
+    .book-content .input-section-persons .number-persons-container input,
+    .book-content .input-section-persons .number-persons-container i {
+        font-size: 4rem;
+    }
+    .book-content .input-form {
+        width: 80%;
+    }
+    .book-content .input-form input {
+        font-size: 4rem;
+    }
+    .book-content .input-form label {
+        font-size: 4.5rem;
+    }
+    .book-content .input-section-hour .hours-container label {
+        font-size: 4rem;
+    }
+    .book-content .input-section-persons .number-persons-container button {
+        font-size: 4rem;
+    }
+    .book-content .button-book section label {
+        font-size: 2rem;
+    }
+    .book-content .button-book section {
+        margin: 0;
+        margin-top: 2em;
+    }
+    input#terms {
+        height: 25px;
+        width: 25px;
+        margin: 0;
+    }
+    .book-content .button-book button {
+        font-size: 4rem;
+    }
+    .book-content .input-section-persons .number-persons-container input {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .success-book {
+        width: 100%;
+    }
+    .success-book h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .success-book h1 {
+        width: 80%;
+    }
+    .container footer {
+        height: 20%;
+    }
+    img.book-image {
+        display: none;
+    }
+    .image-book img {
+        width: 33.33%;
+    }
+    .image-book {
+        height: 300px;
+    }
+    .ui-widget-content {
+        width: 95%;
+        /* position: sticky; */
+    }
+    .ui-datepicker td a {
+        /* height: 10em; */
+        /* font-size: 2rem; */
+        font-size: 4.5em;
+    }
+    .ui-datepicker-unselectable.ui-state-disabled {
+        font-size: 4.5em;
+    }
+}
+
+@media screen and (max-width:780px) {
+    .success-book h1 {
+        width: 80%;
+        text-align: center;
+    }
+    .success-book h2 {
+        top: 0;
+        right: 0.5em;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    /* main .book-content {
+        width: 100%;
+    } */
+    .success-book h1 {
+        font-size: 2rem;
+        width: 70%;
+    }
+    main .book-content form section {
+        margin-right: 0;
+    }
+    main .book-header h1 {
+        font-size: 2rem;
+    }
+    .book-content .button-book {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .book-content .input-section-book {
+        margin: 0;
+        padding: 0;
+        /* padding-left: 1em; */
+    }
+    .book-content .button-book section {
+        /* padding-left: 1em; */
+        margin: 0;
+        padding: 1em;
+    }
+    .book-content .input-form {
+        width: 100%;
+        margin: 0;
+    }
+    .book-content .input-section-hour .hours-container {
+        width: 100%;
+        justify-content: center;
+    }
+    .book-content .input-section-hour .hours-container label {
+        width: 80%;
+        margin: 0;
+        margin-bottom: 0.4em;
+    }
+    .book-content .input-section-persons .number-persons-container {
+        width: 100%;
+        margin: 0;
+        /* padding-left: 1em; */
+    }
+    .book-content .input-section-persons {
+        margin: 0;
+        margin: 0;
+    }
+    .container footer {
+        height: 20%;
+    }
+    img.book-image-dos {
+        display: none;
+    }
+    .image-book img {
+        width: 50%;
+    }
+    .image-book {
+        height: 300px;
+    }
+    .book-content .input-section-persons .number-persons-container button {
+        font-size: 4.5rem;
+    }
+    .ui-datepicker td a {
+        /* height: 10em; */
+        /* font-size: 2rem; */
+        font-size: 3em;
+    }
+    .ui-datepicker-unselectable.ui-state-disabled {
+        font-size: 3em;
+    }
+    .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+        font-size: 3rem;
+    }
+    .ui-widget-header .ui-datepicker-prev .ui-icon {
+        width: 50px;
+        height: 500px;
+    }
+    .ui-widget-header .ui-datepicker-next .ui-icon {
+        width: 55px;
+        height: 55px;
+    }
+    .ui-datepicker .ui-datepicker-prev span {
+        left: 0rem;
+        top: -1.4rem;
+        /* margin: 0px; */
+    }
+    .ui-datepicker .ui-datepicker-next span {
+        left: 0;
+        top: 0.8rem;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .success-book h1 {
+        font-size: 1.5rem;
+    }
+    .success-book h2 {
+        top: -0.4em;
+        right: 0.5em;
+    }
+    main .book-content {
+        width: 97%;
+    }
+    .book-content .input-form input {
+        font-size: 3rem;
+    }
+    .book-content .input-form label {
+        font-size: 3.5em;
+    }
+    .book-content .input-section-hour .hours-container label {
+        font-size: 3.5rem;
+    }
+    .book-content .input-section-persons .number-persons-container button {
+        font-size: 3.5rem;
+    }
+    .book-content .button-book section label {
+        font-size: 2rem;
+    }
+    .book-content .button-book {
+        justify-content: center;
+    }
+    .book-content .button-book button {
+        font-size: 4rem;
+    }
+    .image-book {
+        height: 250px;
+    }
+    .ui-datepicker td a {
+        /* height: 10em; */
+        /* font-size: 2rem; */
+        font-size: 2em;
+    }
+    .ui-datepicker-unselectable.ui-state-disabled {
+        font-size: 2em;
+    }
+    .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+        font-size: 2rem;
+    }
+    .ui-widget-header .ui-datepicker-prev .ui-icon {
+        width: 40px;
+        height: 500px;
+    }
+    .ui-widget-header .ui-datepicker-next .ui-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .ui-datepicker .ui-datepicker-prev span {
+        left: 0rem;
+        top: -2.9rem;
+        /* margin: 0px; */
+    }
+    .ui-datepicker .ui-datepicker-next span {
+        left: 0;
+        top: 0rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    img.book-image-tres {
+        display: none;
+    }
+    .image-book img {
+        width: 100%;
+    }
+    .image-book {
+        height: 250px;
+    }
+}

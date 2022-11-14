@@ -1,0 +1,38 @@
+﻿@model DishModel
+@inject Microsoft.AspNetCore.Identity.SignInManager<aspnetTutorial.Data.User> _signInManager
+
+
+<div class="card">
+    @if (_signInManager.IsSignedIn(User))
+    {
+
+
+        <a id="@Model.ID" class="active-modal">
+            <img id="@Model.ID" src="@String.Format("data:image/jpg;base64,{0}",Convert.ToBase64String(Model.imageBinary))" )" asp-append-version="true" alt="">
+            <div  id="@Model.ID" class="hidden-card-content">
+
+                <h1 id="@Model.ID">
+                    @Model.Name
+                </h1>
+                <h2 id="@Model.ID">$@Model.Price</h2>
+                <h3 id="@Model.ID">Haz click para ver las reseñas</h3>
+            </div>
+        </a>
+    }
+    else
+    {
+
+        <a class="active-modal" asp-controller="Login" asp-action="SignIn" asp-route-returnUrl="@ViewBag.returnUrl">
+            <img src="@String.Format("data:image/jpg;base64,{0}",Convert.ToBase64String(Model.imageBinary))" )" asp-append-version="true" alt="">
+            <div class="hidden-card-content">
+
+                <h1>
+                    @Model.Name
+                </h1>
+                <h2>$@Model.Price</h2>
+                <h3>Haz click para ver las reseñas</h3>
+            </div>
+        </a>
+    }
+ 
+</div>

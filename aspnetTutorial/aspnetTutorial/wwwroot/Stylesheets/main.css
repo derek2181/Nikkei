@@ -1,0 +1,1301 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-landing: #8f1b04;
+    --header-buttons: #621101;
+    --white-main: #FFFFFF;
+    --gray-background: #ececec;
+    /* --gray-background: #797979; */
+    --gray-button: #cccccc;
+    --gray-footer: #403638;
+    --hover-red-button: rgb(80, 14, 14);
+    --hover-white-button: rgb(240, 240, 240);
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container header {
+    width: 100%;
+    background: var(--white-main);
+    /* background: gray; */
+    display: flex;
+    min-height: 90px;
+    z-index: 2;
+    transition: all 200ms ease-in-out
+}
+
+.container header nav {
+    display: flex;
+    width: 30%;
+}
+
+.container header.fixed {
+    position: fixed;
+    opacity: 0.9;
+}
+
+.container header nav ul {
+    overflow: show;
+    width: 100%;
+    font-size: 2.7rem;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.2em;
+    align-items: center;
+}
+
+.container header nav ul li {
+    padding: 0 1em;
+}
+
+.container header ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.container header nav ul li.hidden-nav-button .button-header {
+    display: none;
+    visibility: hidden;
+}
+
+.container header ul li a:hover {
+    color: var(--header-buttons);
+    border-bottom: 0.2em solid var(--header-buttons);
+}
+
+.container header div.logo-header {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container header img {
+    height: 90px;
+}
+
+.container header div.button-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.container header div.button-header a {
+    text-decoration: none;
+    font-size: 3rem;
+    padding: 0.15em 0.7em;
+    margin: 0 0.3em;
+    text-align: right;
+    background: var(--header-buttons);
+    border-radius: 0.5em;
+    color: var(--white-main)
+}
+
+.my-owl-carousel {
+    /* background: var(--red-landing); */
+    width: 100%;
+    /* height: 400px; */
+    margin: 0 auto;
+    padding-bottom: 0 !important;
+}
+
+.owl-dots {}
+
+.container main div.landing-offer section.offer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.owl-stage-outer.owl-height {
+    height: 600px !important;
+}
+
+.owl-item,
+.owl-item.cloned {
+    height: 600px !important;
+}
+
+.container main div.landing-offer {
+    display: flex;
+    height: 600px;
+}
+
+.container main div#item_2.landing-offer {
+    background: url("../Images/Background/NikkeiOutsideEdit.png");
+    /* background-color: ; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    /* filter: blur(1rem); */
+}
+
+.container main div#item_3.landing-offer {
+    background: url("../Images/Background/Conocenos.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-blend-mode: soft-light;
+}
+
+.container main div#item_1.landing-offer {
+    background: url("../Images/Background/NikkeiInside2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-blend-mode: soft-light;
+}
+
+.container main div#item_1.landing-offer section.offer-content,
+.container main div#item_3.landing-offer section.offer-content {
+    width: 100%;
+}
+
+.container main div#item_1 section.offer-content span {
+    color: var(--white-main);
+    font-size: 10rem;
+    font-weight: bolder;
+    background: rgba(29, 28, 28, 0.672);
+}
+
+.container main div#item_2 section.offer-content span {
+    color: var(--white-main);
+    font-size: 7rem;
+    font-weight: bolder;
+    background: rgba(29, 28, 28, 0.672);
+}
+
+.container main div#item_2 section.offer-content h1 {
+    color: var(--white-main);
+    font-size: 4rem;
+    text-align: center;
+    background: rgba(29, 28, 28, 0.672);
+    font-weight: lighter;
+}
+
+.container main div#item_3 section.offer-content h1 {
+    color: var(--white-main);
+    text-align: center;
+    font-size: 6rem;
+    background: rgba(29, 28, 28, 0.672);
+    font-weight: lighter;
+}
+
+.container main div#item_1 section.offer-content h1 {
+    color: var(--white-main);
+    font-size: 4rem;
+    background: rgba(29, 28, 28, 0.672);
+    font-weight: lighter;
+}
+
+.container main div#item_1.landing-offer section.offer-content a,
+.container main div#item_2.landing-offer section.offer-content a,
+.container main div#item_3.landing-offer section.offer-content a {
+    font-size: 3.5rem;
+    text-decoration: none;
+    background: linear-gradient(to top, rgba(29, 28, 28, 0.857) 50%, var(--white-main) 50%);
+    background-size: 100% 200%;
+    background-position: 100% 100%;
+    border-radius: 0.3em;
+    padding: 0.2em 0.2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    color: white;
+    transition: background-position 0.2s ease-in-out, color 0.2s ease-in;
+}
+
+.container main div#item_3.landing-offer section.offer-content a {
+    font-size: 4rem;
+}
+
+.container main div#item_1.landing-offer section.offer-content a:hover,
+.container main div#item_2.landing-offer section.offer-content a:hover,
+.container main div#item_3.landing-offer section.offer-content a:hover {
+    background-position: 100% 200%;
+    color: black;
+}
+
+.container main div#item_1.landing-offer section {
+    width: 100%;
+}
+
+.container main div#item_2.landing-offer section {
+    width: 50%;
+}
+
+.container main div#item_2 section.offer-image {
+    display: flex;
+}
+
+.container main div#item_2 section.offer-image img {
+    width: 70%;
+}
+
+.container header div.button-header a.button-cash {
+    background: none;
+    border: 0.1em solid var(--header-buttons);
+    color: var(--header-buttons)
+}
+
+.container header div.button-header a:hover {
+    background: rgb(80, 14, 14);
+}
+
+.container header div.button-header a.button-cash:hover {
+    background: rgb(240, 240, 240);
+}
+
+.container main {
+    background: url("../Images/Background/PageBackground.png");
+    background-size: 500px;
+    background-position: 100% 75%;
+    background-color: #ececec;
+    background-repeat: no-repeat;
+}
+
+.container main .dashboard-container {
+    display: flex;
+    margin-top: 9em;
+    padding-bottom: 5em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container main .cards-container {
+    width: 100%;
+    padding: 0.2em 4em;
+    display: flex;
+    flex-direction: column;
+    /* transform: opacity 1000ms ease; */
+    /* opacity: 0;  esta es la animacion de js*/
+}
+
+.container main .cards-container h1 {
+    font-size: 4rem;
+    text-align: center;
+    width: fit-content;
+    font-weight: 850;
+}
+
+.container main .cards-container .cards {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: stretch;
+    /* box-shadow: -20px -2px 400px -13px rgba(105, 103, 103, 1); */
+}
+
+.container main .cards-container .cards div.card {
+    width: 21%;
+    height: 300px;
+    /* margin-right: 4%; */
+    /* min-height: 200px; */
+    margin-top: 5em;
+    background: var(--white-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top: 0.5em solid rgb(0, 0, 0);
+    border-left: 0.5em solid rgb(0, 0, 0);
+    border-right: 0.5em solid var(--red-landing);
+    border-bottom: 0.5em solid var(--red-landing);
+    border-radius: 0.3em;
+    box-shadow: 2px -2px 28px -5px rgba(105, 103, 103, 1);
+    -webkit-box-shadow: 2px -2px 28px -5px rgba(105, 103, 103, 1);
+    -moz-box-shadow: 2px -2px 28px -5px rgba(105, 103, 103, 1);
+}
+
+.container main .cards-container .cards div.card a {
+    width: 100%;
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    cursor: pointer;
+}
+
+.hidden-card-content {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: visibility 0.2s ease-in-out;
+}
+
+.container main .cards-container .cards div.card a img {
+    width: 100%;
+    transition: opacity 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.container main .cards-container .cards div.card a:hover img {
+    opacity: 0.15;
+    filter: grayscale();
+    z-index: -5;
+}
+
+.container main .cards-container .cards div.card a:hover .hidden-card-content {
+    visibility: visible;
+    /* z-index: 1; */
+}
+
+.container main .dashboard-container .cards-container .cards div.card a h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container main .dashboard-container .cards-container .cards div.card a h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container main .dashboard-container .cards-container .cards div.card a h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+.container footer {
+    background: var(--gray-footer);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container footer .back-to-top {
+    width: 100%;
+    background: var(--gray-background);
+    /* padding-right: 0.2em; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container footer .back-to-top i {
+    font-size: 5rem;
+    /* width: 99%; */
+    text-align: right;
+    color: var(--header-buttons);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.container footer .back-to-top i:hover {
+    color: black;
+}
+
+.container footer h1 {
+    color: var(--white-main);
+    font-size: 1.8rem;
+    font-weight: 400;
+    /* background: black; */
+    width: 100%;
+    text-align: center;
+}
+
+.container footer div.footer-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container footer div.footer-bottom section {
+    width: 50%;
+}
+
+.container footer div.footer-bottom section.left-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 2em;
+}
+
+.container footer div.footer-bottom section.left-footer-bottom h1 {
+    color: white;
+    margin-top: 2em;
+}
+
+.container footer div.footer-bottom section.left-footer-bottom .contact-box {
+    margin-top: 1.3em;
+}
+
+.container footer div.footer-bottom section.left-footer-bottom .contact-box a {
+    font-size: 2rem;
+    margin-left: 0.2em;
+}
+
+.container footer div.footer-bottom section.left-footer-bottom i {
+    text-align: left;
+    font-size: 2.5rem;
+    color: white;
+    background: rgb(92, 83, 85);
+    padding: 0.25em;
+    border-radius: 1em;
+    /* transform: rotateZ(5rem) */
+}
+
+.container footer div.footer-bottom section.left-footer-bottom a {
+    font-size: 3rem;
+}
+
+.container footer div.footer-bottom section.right-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+    justify-content: center;
+}
+
+.container footer div.footer-bottom section.right-footer-bottom h1 {
+    font-size: 2.4rem;
+    width: 100%;
+    margin: 0;
+    /* margin-top: 2em; */
+    text-align: left;
+}
+
+.container footer div.footer-bottom section.right-footer-bottom i {
+    font-size: 3rem;
+    margin-right: 0.5em;
+    color: var(--white-main)
+}
+
+.container footer div.footer-bottom section.right-footer-bottom p {
+    font-size: 1.6rem;
+    width: 100%;
+    color: var(--gray-button);
+}
+
+.container footer div.footer-bottom section.right-footer-bottom .social-media {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container footer div.footer-bottom section.right-footer-bottom {
+    display: flex;
+    align-items: center;
+}
+
+
+/* .container footer div.footer-bottom section.left-footer-bottom h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin: 0;
+} */
+
+.container footer div.footer-bottom section.left-footer-bottom a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--gray-button);
+    margin: 0;
+}
+
+.container footer div.footer-bottom section.left-footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+div.header-buttons-responsive {
+    display: flex;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+}
+
+div.header-buttons-responsive section {
+    display: flex;
+    width: 25%;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-main);
+}
+
+div.header-buttons-responsive section a {
+    text-decoration: none;
+    color: var(--white-main);
+    font-size: 2.6rem;
+    height: 100%;
+}
+
+div.header-buttons-responsive section a i {
+    font-size: 3.5rem;
+}
+
+div.header-buttons-responsive {
+    visibility: hidden;
+    display: none;
+}
+
+div.header-buttons-responsive section {
+    background: var(--red-landing);
+}
+
+
+/* .buttons-responsive-fixed {
+    position: fixed;
+    bottom: 0;
+} */
+
+@media screen and (max-width:1250px) {
+    .container header {
+        flex-direction: column;
+    }
+    .container header div.logo-header {
+        order: -2;
+        align-items: center;
+        width: 100%;
+    }
+    .container header nav {
+        order: 0;
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .container header nav ul {
+        margin-top: 0.2em;
+        font-size: 2.3rem;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+    .container header nav ul li.hidden-nav-button {
+        display: flex;
+        justify-content: center;
+    }
+    .container header nav ul li.hidden-nav-button .button-header {
+        visibility: visible;
+        width: 100%;
+        display: flex;
+    }
+    .container header nav ul li.hidden-nav-button .button-header a {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    .container header div.button-header.visible-button {
+        visibility: hidden;
+        display: none;
+    }
+    .container header div.button-header a {
+        font-size: 2.3rem;
+        text-align: right;
+    }
+    .container main div#item_1.landing-offer section.offer-content,
+    .container main div#item_3.landing-offer section.offer-content {
+        width: 100%;
+    }
+    .container main div#item_2 section.offer-content span {
+        color: var(--white-main);
+        font-size: 7rem;
+        font-weight: bolder;
+        background: rgba(29, 28, 28, 0.672);
+    }
+    .container main div#item_2 section.offer-content h1 {
+        color: var(--white-main);
+        font-size: 4rem;
+        background: rgba(29, 28, 28, 0.672);
+        font-weight: lighter;
+    }
+    .container main div#item_3 section.offer-content h1 {
+        width: 90%;
+        text-align: center;
+    }
+    .container main div#item_1 section.offer-content h1 {
+        font-size: 3rem;
+    }
+    .container main div#item_1 section.offer-content span {
+        font-size: 8rem;
+    }
+    .container main div#item_1.landing-offer section.offer-content a,
+    .container main div#item_2.landing-offer section.offer-content a,
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 3.5rem;
+        text-decoration: none;
+        background: linear-gradient(to top, rgba(29, 28, 28, 0.857) 50%, var(--white-main) 50%);
+        background-size: 100% 200%;
+        background-position: 100% 100%;
+        border-radius: 0.3em;
+        padding: 0.2em 0.2em;
+        font-weight: bold;
+        margin-top: 1.5em;
+        color: white;
+        transition: background-position 0.2s ease-in-out, color 0.2s ease-in;
+    }
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a:hover,
+    .container main div#item_2.landing-offer section.offer-content a:hover,
+    .container main div#item_3.landing-offer section.offer-content a:hover {
+        background-position: 100% 200%;
+        color: black;
+    }
+    .container main div#item_1.landing-offer section {
+        width: 100%;
+    }
+    .container main div#item_2.landing-offer section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container main div#item_2 section.offer-image {
+        display: none;
+        width: 0%;
+    }
+    .owl-stage-outer.owl-height {
+        height: 450px !important;
+    }
+    .owl-stage-outer.owl-height {
+        height: 450px !important;
+    }
+    .owl-item,
+    .owl-item.cloned {
+        height: 450x !important;
+    }
+    .container main .dashboard-container .cards-container .cards div.card {
+        width: 45%;
+        height: 300px;
+    }
+    .container main .dashboard-container .cards-container .cards div.card a {
+        width: 100%;
+        text-decoration: none;
+        color: rgb(89, 89, 89);
+        cursor: pointer;
+        text-align: center;
+    }
+    .container main .dashboard-container .cards-container .cards div.card a img {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .container main {
+        background: none;
+        background: var(--gray-background);
+    }
+    .container header div.button-header {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+    }
+    .container header nav ul li.hidden-nav-button .button-header a {
+        font-size: 1.8rem;
+        padding: 0.5em;
+    }
+    .container main .dashboard-container .cards-container {
+        padding: 0.2em 0em;
+    }
+    .container main .dashboard-container .cards-container h1 {
+        margin-left: 0.5em;
+    }
+    .container main .dashboard-container .cards-container .cards div.card {
+        width: 45%;
+        margin-right: 0;
+    }
+    .container main .dashboard-container .cards-container .cards {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.left-card img {
+        width: 100%;
+        height: 200px;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card>h1 {
+        font-size: 3rem;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card p {
+        font-size: 1.6rem;
+        text-align: center;
+        padding-right: 0.2em;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card button {
+        font-size: 1.5rem;
+        width: 80%;
+    }
+    .container footer a {
+        width: 40%;
+    }
+    .container footer h1 {
+        color: var(--white-main);
+        font-weight: 400;
+    }
+    .container main div#item_1.landing-offer section.offer-content,
+    .container main div#item_3.landing-offer section.offer-content {
+        width: 100%;
+    }
+    .container main div#item_2 section.offer-content span {
+        color: var(--white-main);
+        font-size: 7rem;
+        font-weight: bolder;
+        background: rgba(29, 28, 28, 0.672);
+    }
+    .container main div#item_2 section.offer-content h1 {
+        color: var(--white-main);
+        font-size: 4rem;
+        background: rgba(29, 28, 28, 0.672);
+        font-weight: lighter;
+    }
+    .container main div#item_3 section.offer-content h1 {
+        width: 90%;
+        text-align: center;
+    }
+    .container main div#item_1 section.offer-content h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .container main div#item_1 section.offer-content span {
+        font-size: 6rem;
+    }
+    .container main div#item_1.landing-offer section.offer-content a,
+    .container main div#item_2.landing-offer section.offer-content a,
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 3.5rem;
+        text-decoration: none;
+        background: linear-gradient(to top, rgba(29, 28, 28, 0.857) 50%, var(--white-main) 50%);
+        background-size: 100% 200%;
+        background-position: 100% 100%;
+        border-radius: 0.3em;
+        padding: 0.2em 0.2em;
+        font-weight: bold;
+        margin-top: 1.5em;
+        color: white;
+        transition: background-position 0.2s ease-in-out, color 0.2s ease-in;
+    }
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a:hover,
+    .container main div#item_2.landing-offer section.offer-content a:hover,
+    .container main div#item_3.landing-offer section.offer-content a:hover {
+        background-position: 100% 200%;
+        color: black;
+    }
+    .container main div#item_1.landing-offer section {
+        width: 100%;
+    }
+    .container main div#item_2.landing-offer section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container main div#item_2 section.offer-image {
+        display: none;
+        width: 0%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .container main .dashboard-container .cards-container .cards div.card a img {
+        width: 70%;
+    }
+    .container main div#item_1.landing-offer section.offer-content,
+    .container main div#item_3.landing-offer section.offer-content {
+        width: 100%;
+    }
+    .container main div#item_2 section.offer-content span {
+        color: var(--white-main);
+        font-size: 7rem;
+        font-weight: bolder;
+        background: rgba(29, 28, 28, 0.672);
+    }
+    .container main div#item_2 section.offer-content h1 {
+        color: var(--white-main);
+        font-size: 4rem;
+        width: 80%;
+        text-align: center;
+        background: rgba(29, 28, 28, 0.672);
+        font-weight: lighter;
+    }
+    .container main div#item_3 section.offer-content h1 {
+        width: 80%;
+        font-size: 4rem;
+        text-align: center;
+    }
+    .container main div#item_1 section.offer-content h1 {
+        font-size: 3rem;
+        text-align: center;
+        width: 80%;
+        /* width: 80%; */
+    }
+    .container main div#item_1 section.offer-content span {
+        font-size: 4.5rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a,
+    .container main div#item_2.landing-offer section.offer-content a,
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 3.5rem;
+        text-decoration: none;
+        background: linear-gradient(to top, rgba(29, 28, 28, 0.857) 50%, var(--white-main) 50%);
+        background-size: 100% 200%;
+        background-position: 100% 100%;
+        border-radius: 0.3em;
+        padding: 0.2em 0.2em;
+        font-weight: bold;
+        margin-top: 1.5em;
+        color: white;
+        transition: background-position 0.2s ease-in-out, color 0.2s ease-in;
+    }
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a:hover,
+    .container main div#item_2.landing-offer section.offer-content a:hover,
+    .container main div#item_3.landing-offer section.offer-content a:hover {
+        background-position: 100% 200%;
+        color: black;
+    }
+    .container main div#item_1.landing-offer section {
+        width: 100%;
+    }
+    .container main div#item_2.landing-offer section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container main div#item_2 section.offer-image {
+        display: none;
+        width: 0%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container header img {
+        height: 70px;
+    }
+    .container main .dashboard-container .cards-container .cards div.card a img {
+        width: 70%;
+    }
+    .container footer {
+        padding-bottom: 100px;
+    }
+    .container footer div.footer-bottom section {
+        width: 100%;
+    }
+    .container footer div.footer-bottom section.left-footer-bottom {
+        margin-bottom: 0.4em;
+        order: 1;
+    }
+    .container footer div.footer-bottom section.left-footer-bottom,
+    .container footer div.footer-bottom section.right-footer-bottom {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .container footer div.footer-bottom section.right-footer-bottom {
+        margin-top: 1em;
+    }
+    .container footer div.footer-bottom section.right-footer-bottom h1 {
+        text-align: center;
+    }
+    .container footer div.footer-bottom section.right-footer-bottom p {
+        text-align: center;
+    }
+    .container footer div.footer-bottom section.right-footer-bottom .social-media a {
+        text-align: center;
+        /* background: black; */
+    }
+    .container footer div.footer-bottom section h1 {
+        text-align: center;
+    }
+    .container footer div.footer-bottom section.left-footer-bottom .contact-box {
+        width: 100%;
+        justify-content: center;
+    }
+    .container footer div.footer-bottom section.left-footer-bottom .contact-box i {
+        margin-left: 0.5em;
+        font-size: 1.5rem;
+    }
+    .container footer div.footer-bottom section.left-footer-bottom .contact-box a {
+        text-align: center;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .container footer div.footer-bottom {
+        flex-direction: column;
+    }
+    .container header nav {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    .container header a {
+        height: 60px;
+    }
+    div.header-buttons-responsive {
+        visibility: visible;
+        display: flex;
+        width: 100%;
+        margin: 0;
+    }
+    div.header-buttons-responsive section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    div.header-buttons-responsive section a {
+        text-decoration: none;
+        outline: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 0.9rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    div.header-buttons-responsive section i {
+        padding-bottom: 0.2em;
+        font-size: 2rem;
+    }
+    div.header-buttons-responsive section.button-responsive-one {
+        display: flex;
+        flex-direction: column;
+    }
+    div.header-buttons-responsive section.button-responsive-two {
+        flex-direction: column;
+    }
+    .container header nav ul {
+        margin: 0.5em 2em;
+        font-size: 1.8rem;
+        justify-content: space-around;
+    }
+    .container main div.landing-offer section.offer-content h1 {
+        font-size: 1.6rem;
+    }
+    .container main div.landing-offer section.offer-content span {
+        font-size: 6rem;
+    }
+    .container header div.button-header {
+        display: none;
+        visibility: hidden;
+    }
+    .container main div.landing-offer {
+        flex-direction: column;
+    }
+    .container main div.landing-offer section {
+        width: 100%;
+    }
+    .container div.landing-offer section.offer-image {
+        order: -1;
+    }
+    .container div.landing-offer {
+        width: 100%;
+    }
+    .container main div.landing-offer section.offer-content h1 {
+        font-size: 1.8rem;
+    }
+    .container main div.landing-offer section.offer-content span {
+        font-size: 6rem;
+    }
+    .container header div.button-header {
+        display: none;
+        visibility: hidden;
+    }
+    .container main div.landing-offer {
+        flex-direction: column;
+        height: 500px;
+    }
+    .container main div.landing-offer section {
+        width: 100%;
+    }
+    .container div.landing-offer section.offer-image {
+        order: -1;
+    }
+    .container main .dashboard-container .cards-container {
+        /* justify-content: center; */
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container main .dashboard-container .cards-container h1 {
+        text-align: center;
+        font-size: 4rem;
+    }
+    .container main .dashboard-container .cards-container .cards {
+        /* justify-content: center; */
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.left-card img {
+        width: 5%;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card h1 {
+        font-size: 2.5rem;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card p {
+        font-size: 1.3rem;
+        text-align: center;
+        padding-right: 0.2em;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card button {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+    .container main .dashboard-container .cards-container .cards div.card {
+        /* flex-direction: column; */
+        width: 85%;
+        height: 350px;
+        /* margin-bottom: 1em; */
+        margin-top: 1em;
+    }
+    .container footer h1 {
+        font-size: 1.5rem;
+    }
+    .container footer a {
+        width: 50%;
+    }
+    div.header-buttons-responsive section a {
+        font-size: 1.2rem;
+    }
+    /*Agregado final*/
+    .container main div#item_1.landing-offer section.offer-content,
+    .container main div#item_3.landing-offer section.offer-content {
+        width: 100%;
+    }
+    .container main div#item_2 section.offer-content span {
+        color: var(--white-main);
+        font-size: 4rem;
+        font-weight: bolder;
+        background: rgba(29, 28, 28, 0.672);
+    }
+    .container main div#item_2 section.offer-content h1 {
+        color: var(--white-main);
+        font-size: 3rem;
+        width: 80%;
+        text-align: center;
+        background: rgba(29, 28, 28, 0.672);
+        font-weight: lighter;
+    }
+    .container main div#item_3 section.offer-content h1 {
+        width: 80%;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .container main div#item_1 section.offer-content h1 {
+        font-size: 3rem;
+        text-align: center;
+        width: 80%;
+        /* width: 80%; */
+    }
+    .container main div#item_1 section.offer-content span {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a,
+    .container main div#item_2.landing-offer section.offer-content a,
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 3rem;
+        text-decoration: none;
+        background: linear-gradient(to top, rgba(29, 28, 28, 0.857) 50%, var(--white-main) 50%);
+        background-size: 100% 200%;
+        background-position: 100% 100%;
+        border-radius: 0.3em;
+        padding: 0.2em 0.2em;
+        font-weight: bold;
+        margin-top: 1.5em;
+        color: white;
+        transition: background-position 0.2s ease-in-out, color 0.2s ease-in;
+    }
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 3.3rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a:hover,
+    .container main div#item_2.landing-offer section.offer-content a:hover,
+    .container main div#item_3.landing-offer section.offer-content a:hover {
+        background-position: 100% 200%;
+        color: black;
+    }
+    .container main div#item_1.landing-offer,
+    .container main div#item_3.landing-offer,
+    .container main div#item_2.landing-offer {
+        align-items: center;
+        justify-content: center;
+    }
+    .container main div#item_1.landing-offer section {
+        width: 100%;
+    }
+    .container main div#item_2.landing-offer section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container main div#item_3.landing-offer {
+        justify-content: center;
+    }
+    .container main div#item_2 section.offer-image {
+        display: none;
+        width: 0%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container main .dashboard-container .cards-container .cards div.card {
+        /* flex-direction: column; */
+        width: 85%;
+        height: 200px;
+        /* margin-bottom: 1em; */
+        margin-top: 1em;
+    }
+    .container main .dashboard-container .cards-container h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+    .container header img {
+        height: 55px;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.left-card {
+        align-items: center;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.left-card img {
+        height: 150px;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card h1 {
+        font-size: 1.8rem;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card h2 {
+        font-size: 1.7rem;
+    }
+    .container main .dashboard-container .cards-container .cards div.card section.right-card button {
+        font-size: 1rem;
+    }
+    .container footer h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .container footer a {
+        width: 50%;
+    }
+    .container footer div.footer-bottom section.left-footer-bottom a {
+        font-size: 1.3rem;
+    }
+    .container footer div.footer-bottom section.right-footer-bottom i {
+        font-size: 2rem;
+    }
+    div.header-buttons-responsive section a {
+        font-size: 0.75rem;
+    }
+    /*Agregado final*/
+    .container main div#item_1.landing-offer section.offer-content,
+    .container main div#item_3.landing-offer section.offer-content {
+        width: 100%;
+    }
+    .container main div#item_2 section.offer-content span {
+        color: var(--white-main);
+        font-size: 3.4rem;
+        font-weight: bolder;
+        background: rgba(29, 28, 28, 0.672);
+    }
+    .container main div#item_2 section.offer-content h1 {
+        color: var(--white-main);
+        font-size: 3rem;
+        width: 80%;
+        text-align: center;
+        background: rgba(29, 28, 28, 0.672);
+        font-weight: lighter;
+    }
+    .container main div#item_3 section.offer-content h1 {
+        width: 80%;
+        font-size: 3rem;
+        text-align: center;
+    }
+    .container main div#item_1 section.offer-content h1 {
+        font-size: 2.6rem;
+        text-align: center;
+        width: 75%;
+        /* width: 80%; */
+    }
+    .container main div#item_1 section.offer-content span {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a,
+    .container main div#item_2.landing-offer section.offer-content a,
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 2.7rem;
+        text-decoration: none;
+        background: linear-gradient(to top, rgba(29, 28, 28, 0.857) 50%, var(--white-main) 50%);
+        background-size: 100% 200%;
+        background-position: 100% 100%;
+        border-radius: 0.3em;
+        padding: 0.2em 0.2em;
+        font-weight: bold;
+        margin-top: 1.5em;
+        color: white;
+        transition: background-position 0.2s ease-in-out, color 0.2s ease-in;
+    }
+    .container main div#item_3.landing-offer section.offer-content a {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .container main div#item_1.landing-offer section.offer-content a:hover,
+    .container main div#item_2.landing-offer section.offer-content a:hover,
+    .container main div#item_3.landing-offer section.offer-content a:hover {
+        background-position: 100% 200%;
+        color: black;
+    }
+    .container main div#item_1.landing-offer,
+    .container main div#item_3.landing-offer,
+    .container main div#item_2.landing-offer {
+        align-items: center;
+        justify-content: center;
+    }
+    .container main div#item_1.landing-offer section {
+        width: 100%;
+    }
+    .container main div#item_2.landing-offer section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container main div#item_3.landing-offer {
+        justify-content: center;
+    }
+    .container main div#item_2 section.offer-image {
+        display: none;
+        width: 0%;
+    }
+}

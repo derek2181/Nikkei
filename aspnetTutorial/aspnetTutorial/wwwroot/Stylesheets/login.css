@@ -1,0 +1,423 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-landing: #8f1b04;
+    --header-buttons: #621101;
+    --white-main: #FFFFFF;
+    --gray-background: #ececec;
+    --gray-button: #cccccc;
+    --gray-footer: #403638;
+    --hover-red-button: rgb(80, 14, 14);
+    --hover-white-button: rgb(240, 240, 240);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    font-family: 'Rubik', sans-serif;
+    background: var(--gray-footer);
+}
+
+.container main {
+    padding-bottom: 10rem;
+    background: url("../Images/Background/PageBackground.png");
+    background-size: 500px;
+    background-position: 90% 50%;
+    background-color: #ececec;
+    background-repeat: no-repeat;
+}
+
+.container main .login-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    z-index: -2;
+}
+
+section.remember-me {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.container main .login-container form .input-form.error-input i,
+.container main .login-container form section.remember-me span {
+    color: black;
+}
+
+.form-check-input input {
+    width: 10px;
+    height: 10px;
+    margin-right: 0.5em;
+}
+
+.container main .login-container h1 {
+    font-size: 1.8rem;
+}
+
+.container main .login-container form h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.container main .login-container h1 a {
+    color: black;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.container main .login-container span {
+    font-size: 1.5rem;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 0.8em;
+    font-weight: 450;
+}
+
+.container main .login-container span i {
+    font-size: 1.5rem;
+    color: var(--red-landing);
+}
+
+.container main .login-container form {
+    display: flex;
+    flex-flow: column wrap;
+    width: 18%;
+    margin-top: 1em;
+    /* border: 0.1em solid black;
+    border-radius: 2em; */
+    padding: 4em 4em 1em 2em;
+}
+
+.container main .login-container form.fb-form,
+.container main .login-container form.g-form {
+    padding: 0;
+    margin: 0;
+    height: 75px;
+}
+
+.container main .login-container form button {
+    background: var(--header-buttons);
+    color: var(--white-main);
+    padding: 0.6em;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.container main .login-container form button:hover {
+    background: var(--hover-red-button);
+}
+
+.container main .login-container form .input-form {
+    background: white;
+    padding: 0.6em;
+    width: 100%;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    border: 0.2em solid black;
+}
+
+.container main .login-container form .input-form.error-input {
+    border: 0.2em solid var(--red-landing)
+}
+
+.container main .login-container form .input-form.error-input i,
+.container main .login-container form span {
+    color: var(--red-landing);
+}
+
+.container main .login-container form .input-form i {
+    width: 6%;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container main .login-container form .input-form input {
+    outline: none;
+    border: none;
+    width: 89%;
+    font-size: 2rem;
+    padding: 0.2em;
+}
+
+.input-form input:-webkit-autofill,
+.input-form input:-internal-autofill-selected,
+.input-form input:-webkit-autofill:hover,
+.input-form input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+.container main .login-container form button {
+    margin-top: 1em;
+    border-radius: 0.8em;
+    border: 0.05em solid black;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.container main .login-container form button.fb-icon {
+    text-decoration: none;
+    background: #37548F;
+}
+
+.container main .login-container form button.g-icon {
+    text-decoration: none;
+    background: #c94406;
+}
+
+.container main .login-container form button.g-icon:hover {
+    background: rgb(157, 54, 7);
+}
+
+.container main .login-container form button.fb-icon:hover {
+    background: #2a4374;
+}
+
+.container main .login-container form button.fb-icon h1,
+.container main .login-container form button.g-icon h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.logo-fb-button,
+.logo-g-button {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-phrase {
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.container footer {
+    background: var(--gray-footer);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container footer>img {
+    width: 20%;
+}
+
+@media screen and (max-width:1350px) {
+    .container footer>img {
+        width: 35%;
+    }
+    .container main .login-container form {
+        width: 30%;
+        margin-top: 1em;
+    }
+    .container main .login-container form h1 {
+        font-size: 3rem;
+    }
+    .container main .login-container form button.fb-icon h1,
+    .container main .login-container form button.g-icon h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .container main .login-container form .input-form input {
+        outline: none;
+        border: none;
+        width: 85%;
+        font-size: 1.8rem;
+        padding: 0.2em;
+    }
+    .container main .login-container form .input-form i {
+        width: 10%;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .container main .login-container form button {
+        background: var(--header-buttons);
+        color: var(--white-main);
+        padding: 0.6em;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1.5em;
+        font-size: 1.6rem;
+        font-weight: 600;
+        border-radius: 1em;
+        cursor: pointer;
+    }
+    .container main .login-container h1 a {
+        color: black;
+        font-weight: 800;
+        font-size: 2rem;
+    }
+    .container main .login-container span {
+        font-size: 1.9rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 0.8em;
+        font-weight: 450;
+    }
+    .container main .login-container span i {
+        font-size: 1.9rem;
+        color: var(--red-landing);
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .container main {
+        background-size: 300px;
+        background-position: 100% 50%;
+        background-color: #ececec;
+    }
+    .container footer>img {
+        width: 40%;
+    }
+    .container main .login-container form {
+        width: 30%;
+        margin-top: 1em;
+    }
+    .container main .login-container form h1 {
+        font-size: 3rem;
+    }
+    .container main .login-container form a.fb-icon h1,
+    .container main .login-container form a.g-icon h1 {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    .container main .login-container form .input-form input {
+        outline: none;
+        border: none;
+        width: 85%;
+        font-size: 1.6rem;
+        padding: 0.2em;
+    }
+    .container main .login-container form .input-form i {
+        width: 10%;
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .container main .login-container h1 {
+        font-size: 1.5rem;
+    }
+    .container main .login-container h1 a {
+        color: black;
+        font-weight: 800;
+        font-size: 1.7rem;
+    }
+    .container main .login-container span {
+        font-size: 1.8rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 0.8em;
+        font-weight: 450;
+    }
+    .container main .login-container span i {
+        font-size: 1.8rem;
+        color: var(--red-landing);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .container footer>img {
+        width: 45%;
+    }
+    .container main {
+        background: var(--gray-background);
+    }
+    .container main .login-container form {
+        width: 40%;
+    }
+    .container main .login-container span {
+        font-size: 1.6rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 0.8em;
+        font-weight: 450;
+    }
+    .container main .login-container span i {
+        font-size: 1.6rem;
+        color: var(--red-landing);
+    }
+    /* .container main .login-container h1 {
+        font-size: 1.3rem;
+    }
+    .container main .login-container h1 a {
+        color: black;
+        font-weight: 800;
+        font-size: 1.5rem;
+    } */
+}
+
+@media screen and (max-width:650px) {
+    .container footer>img {
+        width: 60%;
+    }
+    .container main .login-container form {
+        width: 70%;
+    }
+    .container main .login-container span {
+        font-size: 1.6rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 0.8em;
+        font-weight: 450;
+    }
+    .container main .login-container span i {
+        font-size: 1.6rem;
+        color: var(--red-landing);
+    }
+}
+
+@media screen and (max-width:400px) {
+    .container footer>img {
+        width: 90%;
+    }
+    .container main .login-container form {
+        width: 80%;
+    }
+    .container main .login-container h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .container main .login-container h1 {
+        font-size: 1.3rem;
+    }
+    .container main .login-container h1 a {
+        color: black;
+        font-weight: 800;
+        font-size: 1.5rem;
+    }
+    .container main .login-container span {
+        font-size: 1.3rem;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 0.8em;
+        font-weight: 450;
+    }
+    .container main .login-container span i {
+        font-size: 1.3rem;
+        color: var(--red-landing);
+    }
+}

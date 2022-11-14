@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DishModel>
+
+<div class="cards-container">
+    <h1>Opcion</h1>
+
+    <div class="cards">
+        @foreach (var dish in Model)
+        {
+            <partial name="_dishcard" model="dish" />
+        }
+
+
+    </div>
+
+</div>

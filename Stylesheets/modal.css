@@ -1,0 +1,451 @@
+.modal-bg {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    flex-flow: column wrap;
+    transition: visibility 0s ease, opacity 500ms ease;
+}
+
+.hidden {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-bg .modal-box {
+    height: 100vh;
+    width: 80%;
+    background: var(--gray-background);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.modal-bg .modal-box .left-modal {
+    width: 65%;
+    /* height: 100%; */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: ; */
+}
+
+.modal-bg .modal-box .left-modal .left-bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: white; */
+}
+
+.modal-bg .modal-box .left-modal .left-bottom h1 {
+    font-size: 7rem;
+    text-align: center;
+    /* color: white; */
+    /* width: 30%; */
+    border-bottom: 0.1rem solid black;
+}
+
+.modal-bg .modal-box .left-modal .left-bottom ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+.modal-bg .modal-box .left-modal ul li i {
+    font-size: 4rem;
+    /* background: yellow; */
+    color: black;
+    /* border: 0.1em solid black; */
+    padding: 0.2em;
+    /* background: #8f1b04; */
+}
+
+.modal-bg .modal-box .left-modal img {
+    width: 95%;
+}
+
+.modal-bg .modal-box .right-modal {
+    width: 35%;
+}
+
+.modal-bg .modal-box .right-modal .right-modal-top {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: var(--header-buttons); */
+}
+
+.modal-bg .modal-box .right-modal .right-modal-top h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0;
+    margin-right: 1em;
+    /* color: var(--white-main) */
+}
+
+.modal-bg .modal-box h2 {
+    font-size: 4rem;
+    margin: 0;
+    cursor: pointer;
+    /* width: 90%; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.3em;
+    transition: background 500ms ease;
+    border-radius: 100%;
+    z-index: 10000000;
+}
+
+.modal-bg .modal-box .right-modal .reviews-box {
+    height: 55%;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-flow: row wrap;
+    /* border-bottom: 1em solid white;
+ border-top: 1em solid white;
+ border-right: 1em solid white; */
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review {
+    margin: 4%;
+    width: 92%;
+    /* border: 0.4em solid var(--header-buttons); */
+    background: var(--white-main);
+    padding: 1em;
+    color: black;
+    border: 0.5em solid white;
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .top-review {
+    display: flex;
+    width: 100%;
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .top-review h1 {
+    margin: 0;
+    width: 100%;
+    font-size: 3rem;
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate span {
+    font-size: 2.3rem;
+    margin-left: 1em;
+    font-weight: lighter;
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate ul {
+    list-style: none;
+    display: flex;
+    /* background: var(--gray-background); */
+    padding: 0;
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate ul li {}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate ul li i {
+    font-size: 2.5rem;
+    color: BLACK;
+    padding: 0.2em;
+    /* background: #8f1b04; */
+}
+
+.modal-bg .modal-box .right-modal .reviews-box .review .review-text p {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.modal-bg .modal-box .right-modal .give-review-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+
+.modal-bg .modal-box .right-modal .give-review-button button {
+    font-size: 2rem;
+    background: var(--header-buttons);
+    color: white;
+    width: 50%;
+    border-radius: 0.3em;
+    font-weight: 650;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+.modal-bg .modal-box .right-modal .give-review-button button.review-button {
+    font-size: 4rem;
+    width: 60%;
+}
+
+.modal-bg .modal-box .right-modal .give-review-button button.confirm-review {
+    font-size: 3rem;
+}
+
+.modal-bg .modal-box .right-modal .give-review-button button:hover {
+    background: var(--hover-red-button);
+}
+
+form.send-review-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 2em; */
+}
+
+form.send-review-box textarea {
+    font-size: 3rem;
+    width: 92%;
+    height: 60%;
+    outline: none;
+    border: none;
+}
+
+form.send-review-box .stars-container {
+    display: flex;
+    width: 92%;
+    height: 20%;
+    align-items: left;
+    justify-content: left;
+    /* margin-top: 1em; */
+    margin-bottom: 1em;
+    flex-direction: row;
+}
+
+form.send-review-box .stars-container span {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+form.send-review-box .stars-container input {
+    display: none;
+}
+
+form.send-review-box .stars-container label {
+    font-size: 2.5rem;
+    color: rgb(192, 192, 192);
+    transition: all 0.2s ease;
+}
+
+
+/* form.send-review-box .stars-container input:not(:checked)~label:hover,
+form.send-review-box .stars-container input:not(:checked)~label:hover~label {
+    color: #000;
+}
+
+form.send-review-box .stars-container input:checked~label {
+    color: #000;
+} */
+
+.confirm-button-con {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+.modal-bg .modal-box .right-modal .button-show-reviews-container button {
+    width: 60%;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 0.4em;
+    outline: none;
+    border: none;
+    background: var(--gray-button);
+    color: black;
+    /* padding: 0.5em; */
+    padding: 0;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.button-show-reviews-container {
+    width: 90%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width:1500px) and (max-width:1730px) {
+    .modal-bg .modal-box .left-modal img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .modal-bg .modal-box {
+        height: 95%;
+        overflow-x: hidden;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+    .modal-bg .modal-box .left-modal {
+        width: 100%;
+        /* height: 30vh; */
+    }
+    .modal-bg .modal-box .left-modal img {
+        width: 100%;
+    }
+    .modal-bg .modal-box .right-modal {
+        width: 100%;
+        /* height: 70vh; */
+    }
+    .modal-bg .modal-box .right-modal .reviews-box {
+        width: 100%;
+        justify-content: center;
+        overflow-y: scroll;
+        height: 80%;
+    }
+    .modal-bg .modal-box .right-modal .give-review-button button {
+        font-size: 4rem;
+    }
+    .confirm-button-con {
+        /* height: 200px; */
+    }
+    .modal-bg .modal-box .right-modal .right-modal-top {
+        justify-content: left;
+        padding-left: 5em;
+        height: 100px;
+        width: 50%;
+    }
+    .modal-bg .modal-box .right-modal .right-modal-top h1 {
+        font-size: 4rem;
+    }
+    /* .button-show-reviews-container {
+        display: flex;
+        height: 60px;
+        width: 100%;
+        justify-content: center;
+        visibility: visible;
+    } */
+    .modal-bg .modal-box .right-modal .give-review-button {
+        height: 300px;
+    }
+    form.send-review-box {
+        height: 100%;
+        /* height: 100%; */
+        /* padding-bottom: 0.2em; */
+    }
+    form.send-review-box textarea {
+        font-size: 3rem;
+        /* height: 15%; */
+    }
+    form.send-review-box .stars-container {
+        align-items: center;
+        /* height: 30%; */
+    }
+}
+
+@media screen and (max-width:1400px) {}
+
+@media screen and (max-width:700px) {
+    .modal-bg .modal-box .right-modal .right-modal-top {
+        justify-content: left;
+        margin: 0;
+        width: 100%;
+        padding-left: 3em;
+    }
+    .modal-bg .modal-box .left-modal .left-bottom h1 {
+        font-size: 4rem;
+    }
+    .modal-bg .modal-box .left-modal .left-bottom ul li i {
+        font-size: 2rem;
+    }
+    .modal-bg .modal-box .left-modal img {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .modal-bg .modal-box .left-modal img {
+        height: 300px;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review {
+        width: 100%;
+        margin: 1%;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .top-review h1 {
+        font-size: 2rem;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate ul li i {
+        font-size: 1.8rem;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate span {
+        font-size: 1.5rem;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .review-text p {
+        font-size: 1.6rem;
+    }
+    form.send-review-box .stars-container span {
+        font-size: 1.9rem;
+    }
+    form.send-review-box .stars-container label {
+        font-size: 2.5rem;
+    }
+    .modal-bg .modal-box .right-modal .give-review-button button {
+        width: 80%;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .modal-bg .modal-box .right-modal .right-modal-top {
+        padding-left: 0.7em;
+    }
+    .modal-bg .modal-box .right-modal .right-modal-top h1 {
+        font-size: 2.5rem;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .top-review h1 {
+        font-size: 1.6rem;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate ul li i {
+        font-size: 1.2rem;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .review-date-rate span {
+        font-size: 1.5rem;
+    }
+    .modal-bg .modal-box .right-modal .reviews-box .review .review-text p {
+        font-size: 1.4rem;
+    }
+    form.send-review-box .stars-container span {
+        font-size: 1.5rem;
+    }
+    form.send-review-box .stars-container label {
+        font-size: 1.8rem;
+    }
+    .modal-bg .modal-box .right-modal .give-review-button button {
+        width: 80%;
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,509 @@
+:root {
+    --red-landing: #8f1b04;
+    --header-buttons: #621101;
+    --white-main: #FFFFFF;
+    --gray-background: #ececec;
+    /* --gray-background: #797979; */
+    --gray-button: #cccccc;
+    --gray-footer: #403638;
+    --hover-red-button: rgb(80, 14, 14);
+    --hover-white-button: rgb(240, 240, 240);
+}
+
+.modal-bg {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    flex-flow: column wrap;
+    transition: visibility 0s ease, opacity 500ms ease;
+}
+
+.hidden {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-bg .modal-box {
+    height: 70vh;
+    width: 60%;
+    background: var(--gray-background);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: scroll;
+    z-index: 100000000;
+}
+
+.close-modal.device {
+    background: black;
+    width: 60%;
+    display: none;
+    cursor: pointer;
+}
+
+.close-modal.device h2 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+h4.close-modal {
+    position: absolute;
+    right: 20px;
+    top: -40px;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.modal-box .button-write-review {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+.modal-box .button-write-review button {
+    padding: 0.5em 4em;
+    position: relative;
+    font-size: 2rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background: var(--header-buttons);
+    color: white;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.modal-box .button-write-review button:hover {
+    background: var(--hover-red-button);
+}
+
+.modal-box .top-modal {
+    width: 100%;
+    display: flex;
+}
+
+.modal-box .top-modal .left-top-modal {
+    width: 40%;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box .top-modal .left-top-modal img {
+    width: 80%;
+    border-left: 0.5em solid black;
+    border-top: 0.5em solid black;
+    border-right: 0.5em solid var(--red-landing);
+    border-bottom: 0.5em solid var(--red-landing);
+}
+
+.modal-box .top-modal .right-top-modal {
+    width: 60%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-box .top-modal .right-top-modal .name-description {
+    width: 100%;
+}
+
+.modal-box .top-modal .right-top-modal .name-description h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    color: var(--red-landing);
+}
+
+.modal-box .top-modal .right-top-modal .name-description p {
+    font-size: 2.1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.modal-box .top-modal .right-top-modal .rating-item-number {
+    margin: 0 auto;
+}
+
+.modal-box .top-modal .right-top-modal .rating-item-number span {
+    font-size: 4rem;
+}
+
+.modal-box .top-modal .right-top-modal .stars-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-box .top-modal .right-top-modal .stars-text ul {
+    display: flex;
+    padding: 0;
+}
+
+.modal-box .top-modal .right-top-modal .stars-text ul li {
+    list-style: none;
+    font-size: 3rem;
+}
+
+.modal-box .top-modal .right-top-modal .stars-text span {
+    font-size: 2rem;
+}
+
+.modal-box form {
+    width: 90%;
+    margin: 0 auto;
+    /* padding-left: 1em; */
+}
+
+.modal-box form .stars-container {
+    padding-bottom: 2em;
+}
+
+.modal-box form .stars-container span {
+    font-size: 3rem;
+}
+
+.modal-box form .stars-container label {
+    font-size: 2.5rem;
+    color: rgb(192, 192, 192);
+}
+
+.modal-box form .stars-container input {
+    display: none;
+}
+
+.modal-box form textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 3rem;
+    ;
+}
+
+.modal-box form .confirm-button-con {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.modal-box form .confirm-button-con button {
+    padding: 0.5em 4em;
+    font-size: 2.5rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background: var(--header-buttons);
+    color: white;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.modal-box form .confirm-button-con .modal-box .bottom-modal {
+    width: 100%;
+}
+
+.modal-box .bottom-modal .reviews-box {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.modal-box .bottom-modal .reviews-box .first-review-message {
+    margin: 0 auto;
+    width: 1005;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-box .bottom-modal .reviews-box .first-review-message h1 {
+    font-size: 3rem;
+}
+
+.modal-box .bottom-modal .reviews-box .review {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 2em;
+    background: rgb(255, 255, 255);
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review {
+    display: flex;
+}
+
+.modal-box .bottom-modal .reviews-box .review .bottom-review {
+    width: 90%;
+}
+
+.modal-box .bottom-modal .reviews-box .review .bottom-review p {
+    font-size: 2.3rem;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review section.user-reaction {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5em;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review section.user-reaction i {
+    font-size: 4rem;
+    /* background: var(--red-landing); */
+    /* color: white; */
+    border-radius: 100%;
+    ;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review section.days {
+    display: flex;
+    align-items: flex-end;
+    width: 20%;
+    justify-content: center;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review section.days span {
+    font-size: 2rem;
+    color: gray;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review .user-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review .user-rating .face-name-date {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review .user-rating .face-name-date span {
+    font-size: 2.6rem;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review .user-rating .face-name-date h2 {
+    margin: 0;
+    font-size: 2.6rem;
+    font-weight: 400;
+    /* margin-right: 0.4em; */
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review .user-rating ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-box .bottom-modal .reviews-box .review .top-review .user-rating ul li {
+    list-style: none;
+    font-size: 2.2rem;
+    color: rgb(248, 162, 2);
+}
+
+@media screen and (max-width:1500px) {
+    .modal-box .top-modal .right-top-modal .name-description h1 {
+        font-size: 4rem;
+    }
+    .modal-box .top-modal .right-top-modal .rating-item-number span {
+        font-size: 3.6rem;
+    }
+    .modal-box .top-modal .right-top-modal .stars-text ul li {
+        font-size: 2.5rem;
+    }
+    .modal-box .top-modal .right-top-modal .stars-text span {
+        font-size: 1.7rem;
+    }
+    .modal-box .top-modal .left-top-modal img {
+        width: 100%;
+    }
+    .modal-box .top-modal .right-top-modal .name-description p {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .close-modal {
+        display: none;
+    }
+    .close-modal.device {
+        display: block;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review section.days {
+        width: 100%;
+    }
+    .modal-box .top-modal .left-top-modal img {
+        width: 100%;
+    }
+    .modal-box .bottom-modal .reviews-box .first-review-message {
+        margin: 0 auto;
+        width: 1005;
+        display: flex;
+        justify-content: center;
+    }
+    .modal-box .bottom-modal .reviews-box .first-review-message h1 {
+        font-size: 3rem;
+    }
+    .modal-box .bottom-modal .reviews-box .first-review-message {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .modal-box .bottom-modal .reviews-box .first-review-message h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review .user-rating .face-name-date h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .modal-box .top-modal .right-top-modal .name-description h1 {
+        font-size: 3rem;
+    }
+    .modal-box .top-modal .right-top-modal .name-description p {
+        font-size: 1.4rem;
+    }
+    .modal-box .top-modal .right-top-modal .rating-item-number span {
+        font-size: 2.6rem;
+    }
+    .modal-box .top-modal .left-top-modal img {
+        width: 100%
+    }
+}
+
+@media screen and (max-width:700px) {
+    .modal-box .button-write-review button {
+        padding: 0;
+    }
+    .modal-box .top-modal .left-top-modal img {
+        width: 60%
+    }
+    .modal-box form .stars-container span {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .modal-box .top-modal {
+        flex-direction: column;
+    }
+    .modal-box .top-modal .left-top-modal {
+        width: 100%;
+        padding: 0;
+        padding-top: 1.2em;
+    }
+    .modal-box .top-modal .right-top-modal {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        padding-bottom: 1em;
+    }
+    .modal-box .bottom-modal .reviews-box .review {
+        /* padding: 0.1; */
+        margin: 0 auto;
+        width: 90%;
+        margin-bottom: 1em;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review section.user-reaction i {
+        font-size: 2.5rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review .user-rating .face-name-date h2 {
+        font-size: 2rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review .user-rating ul li {
+        font-size: 2rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review section.days span {
+        font-size: 1.6rem;
+    }
+    .modal-box .button-write-review {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .modal-box .button-write-review button {
+        font-size: 1.7rem;
+        padding: 0.4em 3.7em;
+    }
+    .modal-box form .stars-container span {
+        font-size: 1.8rem;
+    }
+    .modal-box form .stars-container label {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .modal-box .bottom-modal .reviews-box .review .bottom-review p {
+        font-size: 1.8rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review .user-rating .face-name-date h2 {
+        font-size: 1.3rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review .user-rating ul li {
+        font-size: 1.3rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review section.user-reaction i {
+        font-size: 2.2rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review section.days span {
+        font-size: 1.3rem;
+    }
+    .modal-box .top-modal .right-top-modal .name-description h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .modal-box .bottom-modal .reviews-box .first-review-message h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .modal-box form textarea {
+        font-size: 1.5rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review section.days {
+        display: none;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review .user-rating .face-name-date h2 {
+        font-size: 1.6rem;
+    }
+    .modal-box .bottom-modal .reviews-box .review .top-review .user-rating ul li {
+        font-size: 1.6rem;
+    }
+    .modal-box form .stars-container span {
+        font-size: 1.4rem;
+    }
+    .modal-box form .stars-container label {
+        font-size: 1.8rem;
+    }
+    .modal-box form .stars-container {
+        flex-direction: column;
+    }
+    .modal-box form textarea {
+        font-size: 1.2rem;
+    }
+    .modal-box form .confirm-button-con {
+        margin: 0 auto;
+    }
+    .modal-box form .confirm-button-con button {
+        font-size: 1.2rem;
+    }
+    .modal-box .bottom-modal .reviews-box {
+        width: 95%;
+    }
+    .modal-box .bottom-modal .reviews-box .review {
+        width: 100%;
+        padding: 0;
+    }
+}

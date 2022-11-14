@@ -1,0 +1,65 @@
+﻿
+@section Style{
+    <link rel="stylesheet" href="/Stylesheets/login.css">
+}
+
+@model UserSignInModel
+<main>
+
+    <div class="login-container">
+
+        <form method="post" asp-action="SignIn" asp-controller="Login">
+            <input type="hidden" name="returnURL" value="@ViewBag.returnURL" />
+            <h1>Iniciar sesión</h1>
+            <div class="input-form">
+                <!--Poner error-input si hay algun error -->
+                <i class="fas fa-user"></i>
+                <input asp-for="Email" placeholder="Correo electronico">
+            </div>
+            <span style="color:red" asp-validation-for="Email"></span>
+            <!--<i class="fas fa-exclamation-circle"></i>-->
+            <div class="input-form">
+                <i class="fas fa-key"></i>
+                <input asp-for="Password" placeholder="Contraseña">
+            </div>
+            <span style="color:red" asp-validation-for="Password">@(ViewBag.Error==null?"": ViewBag.Error)</span>
+            <section class="remember-me">
+                <input class="form-check-input" asp-for="RememberMe" />
+                <span>Recordarme</span>
+                </section>
+
+
+                <button type="submit">Iniciar sesión</button>
+
+
+
+        </form>
+        <form class="fb-form" asp-controller="Login" asp-action="ExternalLogin">
+            <input type="hidden" name="returnURL" value="@ViewBag.returnURL" />
+            <button class="fb-icon"  name="provider" value="Facebook">
+
+                <div class="logo-fb-button">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="logo-phrase">
+                    <h1>Entrar con Facebook</h1>
+                </div>
+
+            </button>
+        </form>
+        <form class="g-form" asp-controller="Login" asp-action="ExternalLogin">
+            <button type="submit" name="provider" value="Google" class="g-icon">
+                <input type="hidden" name="returnURL" value="@ViewBag.returnURL" />
+                <div class="logo-g-button">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="logo-phrase">
+                    <h1>Entrar con Google</h1>
+                </div>
+
+            </button>
+        </form>
+        <h1>No tienes una cuenta? <a asp-controller="Login" asp-action="SignUp">Registrate aquí</a></h1>
+            
+    </div>
+</main>
